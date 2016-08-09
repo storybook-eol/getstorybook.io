@@ -68,10 +68,11 @@ class Notes extends React.Component {
 
 export function register() {
   addons.register('kadira/notes', (api) => {
-    const channel = addons.getChannel();
     addons.addPanel('kadira/notes/panel', {
       title: 'Notes',
-      render: () => (<Notes channel={channel} api={api}/>),
+      render: () => (
+        <Notes channel={addons.getChannel()} api={api}/>
+      ),
     })
   })
 }
