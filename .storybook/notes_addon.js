@@ -3,10 +3,12 @@ import addons from '@kadira/storybook-addons';
 
 const styles = {
   notesPanel: {
-    padding: 10,
+    margin: 10,
     fontFamily: '-apple-system, ".SFNSText-Regular", "San Francisco", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif',
     fontSize: 14,
     color: '#444',
+    width: '100%',
+    overflow: 'auto',
   }
 };
 
@@ -53,14 +55,13 @@ class Notes extends React.Component {
   }
 
   render() {
-    const { text = "" } = this.state;
-    const textAfterFormatted = text.trim().replace(/\n/g, '<br />');
+    const { text } = this.state;
+    const textAfterFormatted = text? text.trim().replace(/\n/g, '<br />') : "";
 
     return (
-      <div
-        style={styles.notesPanel}
-        dangerouslySetInnerHTML={{__html: textAfterFormatted}}
-      />
+      <div style={styles.notesPanel}>
+        <div dangerouslySetInnerHTML={{__html: textAfterFormatted}} />
+      </div>
     );
   }
 }

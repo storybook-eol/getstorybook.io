@@ -17,12 +17,16 @@ const complete = require('../design/homepage.png');
 
 const stories = storiesOf('Components', module);
 
-const headerNotes = `
-  This is the best place fo hippers.
-  I mean it.
-`;
 stories.add('Header', () => (
-  <WithNote note={headerNotes}>
+  <WithNote
+    note={`
+Use these links:
+
+* Home - '/'
+* Docs - https://docs.getstorybook.io
+* Academy - Don't add this for now.
+* Storybooks.io - https://storybooks.io
+    `}>
     <WithDesign design={slices.header}>
 
     </WithDesign>
@@ -30,7 +34,11 @@ stories.add('Header', () => (
 ));
 
 stories.add('Logo', () => (
-  <WithNote note="Logo note">
+  <WithNote
+    note={`
+For here, use 'monospace' font-face.
+    `}
+  >
     <WithDesign design={slices.logo}>
 
     </WithDesign>
@@ -38,15 +46,34 @@ stories.add('Logo', () => (
 ));
 
 stories.add('UVP', () => (
-  <WithDesign design={slices.uvp}>
+  <WithNote
+    note={`
+Here both React and React Native are links. We need to give some hover action to it.
+Add these links:
 
-  </WithDesign>
+* React - https://github.com/kadirahq/react-storybook
+* React Native - https://github.com/kadirahq/react-native-storybook
+    `}
+  >
+    <WithDesign design={slices.uvp}>
+
+    </WithDesign>
+  </WithNote>
 ));
 
 stories.add('VideoPlayer', () => (
-  <WithDesign design={slices.videoPlayer}>
+  <WithNote
+    note={`
+Here, we don't embed a video player by default.
+Once the user click on the above image, we'll render a youtube video replacing the image.
 
-  </WithDesign>
+The blue padding will be there even we replace the image with the video.
+    `}
+  >
+    <WithDesign design={slices.videoPlayer}>
+
+    </WithDesign>
+  </WithNote>
 ));
 
 stories.add('Features', () => (
@@ -62,13 +89,35 @@ stories.add('GettingStarted', () => (
 ));
 
 stories.add('MainLinks', () => (
-  <WithDesign design={slices.mainLinks}>
+  <WithNote
+    note={`
+Here for the "Read Docs" and "Subscribe to NewsLetter" links, use some icons from glyphicons or something related.
+And when hovered, reduce the opacity.
 
-  </WithDesign>
+Add following links:
+
+* Read Docs: https://docs.getstorybook.io
+* Slack: https://slack.getstorybook.io
+* NewsLetter: https://tinyletter.com/storybooks
+    `}
+  >
+    <WithDesign design={slices.mainLinks}>
+
+    </WithDesign>
+  </WithNote>
 ));
 
 stories.add('Footer', () => (
-  <WithDesign design={slices.footer}>
+  <WithNote
+    note={`
+Use these links:
 
-  </WithDesign>
+* Twitter - https://twitter.com/kadirahq
+* Medium - https://voice.kadira.io/
+    `}
+  >
+    <WithDesign design={slices.footer}>
+
+    </WithDesign>
+  </WithNote>
 ));
