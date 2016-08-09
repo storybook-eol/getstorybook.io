@@ -97,7 +97,7 @@ And when hovered, reduce the opacity.
 Add following links:
 
 * Read Docs: https://docs.getstorybook.io
-* Slack: https://slack.getstorybook.io
+* Slack: https://storybooks-slackin.herokuapp.com
 * NewsLetter: https://tinyletter.com/storybooks
     `}
   >
