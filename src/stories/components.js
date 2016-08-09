@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import WithDesign from './with_design';
+import { WithNote } from '../../.storybook/notes_addon';
 
 const slices = {
   header: require('../design/header-slice.png'),
@@ -16,16 +17,24 @@ const complete = require('../design/homepage.png');
 
 const stories = storiesOf('Components', module);
 
+const headerNotes = `
+  This is the best place fo hippers.
+  I mean it.
+`;
 stories.add('Header', () => (
-  <WithDesign design={slices.header}>
+  <WithNote note={headerNotes}>
+    <WithDesign design={slices.header}>
 
-  </WithDesign>
+    </WithDesign>
+  </WithNote>
 ));
 
 stories.add('Logo', () => (
-  <WithDesign design={slices.logo}>
+  <WithNote note="Logo note">
+    <WithDesign design={slices.logo}>
 
-  </WithDesign>
+    </WithDesign>
+  </WithNote>
 ));
 
 stories.add('UVP', () => (
