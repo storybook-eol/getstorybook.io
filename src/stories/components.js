@@ -28,7 +28,7 @@ Use these links:
 * Storybooks.io - https://storybooks.io
     `}>
     <WithDesign design={slices.header}>
-
+      <h4>This is the header.</h4>
     </WithDesign>
   </WithNote>
 ));
