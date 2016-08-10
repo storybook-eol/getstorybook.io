@@ -5,6 +5,6 @@ export default {
   },
 
   logo: {
-    width: '1110px',
+    width: '600px',
   }
 };
