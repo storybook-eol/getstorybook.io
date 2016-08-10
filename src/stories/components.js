@@ -3,6 +3,15 @@ import { storiesOf, action } from '@kadira/storybook';
 import WithDesign from './with_design';
 import { WithNote } from '../../.storybook/notes_addon';
 
+import Header from '../components/Header';
+import Logo from '../components/Logo';
+import UVP from '../components/UVP';
+import VideoPlayer from '../components/VideoPlayer';
+import Features from '../components/Features';
+import GettingStarted from '../components/GettingStarted';
+import MainLinks from '../components/MainLinks';
+import Footer from '../components/Footer';
+
 const slices = {
   header: require('../design/header-slice.png'),
   logo: require('../design/logo-slice.png'),
@@ -28,7 +37,7 @@ Use these links:
 * Storybooks.io - https://storybooks.io
     `}>
     <WithDesign design={slices.header}>
-      <h4>This is the header.</h4>
+      <Header />
     </WithDesign>
   </WithNote>
 ));
@@ -40,7 +49,7 @@ For here, use 'monospace' font-face.
     `}
   >
     <WithDesign design={slices.logo}>
-
+      <Logo />
     </WithDesign>
   </WithNote>
 ));
@@ -56,7 +65,7 @@ Add these links:
     `}
   >
     <WithDesign design={slices.uvp}>
-
+      <UVP />
     </WithDesign>
   </WithNote>
 ));
@@ -71,20 +80,20 @@ The blue padding will be there even we replace the image with the video.
     `}
   >
     <WithDesign design={slices.videoPlayer}>
-
+      <VideoPlayer />
     </WithDesign>
   </WithNote>
 ));
 
 stories.add('Features', () => (
   <WithDesign design={slices.features}>
-
+    <Features />
   </WithDesign>
 ));
 
 stories.add('GettingStarted', () => (
   <WithDesign design={slices.gettingStarted}>
-
+    <GettingStarted />
   </WithDesign>
 ));
 
@@ -102,7 +111,7 @@ Add following links:
     `}
   >
     <WithDesign design={slices.mainLinks}>
-
+      <MainLinks />
     </WithDesign>
   </WithNote>
 ));
@@ -117,7 +126,7 @@ Use these links:
     `}
   >
     <WithDesign design={slices.footer}>
-
+      <Footer />
     </WithDesign>
   </WithNote>
 ));
