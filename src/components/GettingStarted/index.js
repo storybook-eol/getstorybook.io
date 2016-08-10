@@ -4,16 +4,14 @@ import styles from './styles';
 class GettingStarted extends Component {
   render() {
     return (
-      <div>
-        <h3>Getting Started</h3>
+      <div style={ styles.wrapper }>
+        <h3 style={ styles.h3 }>Getting Started</h3>
 
-        <code>
-          <pre>
-            npm i -g getstorybook
-            cd my-app
-            getstorybook
-          </pre>
-        </code>
+        <div style={ styles.code }>
+          npm i -g getstorybook<br />
+          cd my-app<br />
+          getstorybook<br />
+        </div>
       </div>
     );
   }

@@ -7,27 +7,39 @@ import subscribe from './images/subscribe.png';
 class MainLinks extends Component {
   render() {
     return (
-      <div>
-        <a href="">
-          <div>
-            <img src={docs} />
-            Read Docs
-          </div>
-        </a>
+      <div style={ styles.wrapper }>
+        <div style={ styles.box }>
+          <a
+            style={ styles.a }
+            href="https://docs.getstorybook.io"
+            target="_blank"
+          >
+            <img style={ styles.img } src={docs} />
+            <p>Read Docs</p>
+          </a>
+        </div>
 
-        <a href="">
-          <div>
-            <img src={slack} />
-            Join Us on Slack
-          </div>
-        </a>
+        <div style={ styles.box }>
+          <a
+            style={ styles.a }
+            href="https://slack.getstorybook.io"
+            target="_blank"
+          >
+            <img style={ styles.img } src={slack} />
+            <p>Join Us on Slack</p>
+          </a>
+        </div>
 
-        <a href="">
-          <div>
-            <img src={subscribe} />
-            Subscribe to NewsLetter
-          </div>
-        </a>
+        <div style={ styles.box }>
+          <a
+            style={ styles.a }
+            href="https://tinyletter.com/storybooks"
+            target="_blank"
+          >
+            <img style={ styles.img } src={subscribe} />
+            <p>Subscribe to NewsLetter</p>
+          </a>
+        </div>
       </div>
     );
   }

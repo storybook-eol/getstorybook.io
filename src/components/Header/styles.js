@@ -1,6 +1,7 @@
 export default {
   wrapper: {
     margin: 'auto',
+    marginBottom: '70px',
   },
 
   ul: {

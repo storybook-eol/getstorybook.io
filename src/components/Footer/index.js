@@ -6,9 +6,18 @@ import medium from './images/medium.png';
 class Footer extends Component {
   render() {
     return (
-      <div>
-        <a href=""><img src={twitter} /></a>
-        <a href=""><img src={medium} /></a>
+      <div style={ styles.wrapper }>
+        <a
+          target="_blank"
+          href="https://twitter.com/kadirahq"
+        >
+          <img style={ styles.img } src={twitter} />
+        </a>
+        <a
+          href="https://voice.kadira.io/"
+        >
+          <img style={ styles.img } src={medium} />
+        </a>
       </div>
     );
   }

@@ -2,6 +2,7 @@ export default {
   wrapper: {
     margin: 'auto',
     textAlign: 'center',
+    marginBottom: '45px',
   },
 
   p: {

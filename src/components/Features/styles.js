@@ -1,26 +1,22 @@
 export default {
   wrapper: {
-    width: '800px',
     margin: 'auto',
-    border: '1px solid #ccc',
-    boxShadow: 'rgb(200, 200, 200) 0px 2px 4px',
+    marginBottom: '50px',
+    width: '700px',
+    background: '#feffea',
+    padding: '25px 35px',
+    textAlign: 'center',
   },
 
-  ul: {
-    margin: 0,
+  h3: {
+    margin: '0 0 25px',
     padding: 0,
-    listStyle: 'none',
+    fontSize: '29px',
   },
 
-  li: {
-    all: {
-      padding: '15px 20px',
-      cursor: 'pointer',
-      borderTop: '1px solid #ccc',
-    },
-    first: {
-      padding: '15px 20px',
-      cursor: 'pointer',
-    },
+  p: {
+    fontSize: '25px',
+    lineHeight: '43px',
+    letterSpacing: '1px',
   },
 };
