@@ -3,6 +3,8 @@ import { storiesOf, action } from '@kadira/storybook';
 import WithDesign from './with_design';
 import { WithNote } from '../../.storybook/notes_addon';
 
+import HomePage from '../components/HomePage';
+
 const stories = storiesOf('Pages');
 const homepageDesign = require('../design/homepage.png');
 
@@ -20,7 +22,7 @@ If this is ugly, we could change it.
     `}
   >
     <WithDesign design={homepageDesign}>
-
+      <HomePage />
     </WithDesign>
   </WithNote>
 ));
