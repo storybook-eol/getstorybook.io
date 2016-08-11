@@ -2,9 +2,9 @@ export default {
   wrapper: {
     margin: 'auto',
     marginBottom: '50px',
-    width: '700px',
+    width: '70%',
     background: '#feffea',
-    padding: '25px 35px',
+    padding: '5% 8%',
     textAlign: 'center',
   },
 
@@ -15,7 +15,7 @@ export default {
   },
 
   p: {
-    fontSize: '25px',
+    fontSize: '26px',
     lineHeight: '43px',
     letterSpacing: '1px',
   },

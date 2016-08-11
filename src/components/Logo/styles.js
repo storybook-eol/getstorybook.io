@@ -5,7 +5,7 @@ export default {
   },
 
   logo: {
-    width: '600px',
+    maxWidth: '600px',
   },
 
   border: {

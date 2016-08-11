@@ -1,8 +1,8 @@
 export default {
   wrapper: {
-    width: '700px',
+    width: '100%',
     margin: 'auto',
-    marginBottom: '110px',
+    marginBottom: '15%',
     textAlign: 'center',
   },
 

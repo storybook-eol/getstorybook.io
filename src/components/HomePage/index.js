@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import styles from './styles';
+import { Flex, Box } from 'reflexbox'
 
 import Header from '../Header';
 import Logo from '../Logo';
@@ -13,16 +14,23 @@ import Footer from '../Footer';
 class HomePage extends Component {
   render() {
     return (
-      <div style={ styles.wrapper }>
-        <Header />
-        <Logo />
-        <UVP />
-        <VideoPlayer />
-        <Features />
-        <GettingStarted />
-        <MainLinks />
-        <Footer />
-      </div>
+      <Flex
+        align="center"
+        justify="center"
+      >
+        <div style={ styles.wrapper }>
+          <Box>
+            <Header />
+            <Logo />
+            <UVP />
+            <VideoPlayer />
+            <Features />
+            <GettingStarted />
+            <MainLinks />
+            <Footer />
+          </Box>
+        </div>
+      </Flex>
     );
   }
 }

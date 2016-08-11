@@ -19,5 +19,5 @@ export default {
     height: '414px',
     padding: '30px',
     border: 'none',
-  }
+  },
 };

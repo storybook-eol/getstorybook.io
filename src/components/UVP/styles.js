@@ -7,6 +7,7 @@ export default {
 
   p: {
     fontSize: '30px',
+    textAlign: 'center',
   },
 
   a: {

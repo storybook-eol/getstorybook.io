@@ -12,7 +12,8 @@ export default {
 
   box: {
     border: '1px solid #ccc',
-    width: '280px',
+    width: '28%',
+    height: '60px',
     textAlign: 'left',
     padding: '12px',
   },
@@ -24,7 +25,7 @@ export default {
   },
 
   img: {
-    width: '46px',
+    width: '17%',
     paddingRight: '15px',
     float: 'left',
   },

@@ -2,11 +2,11 @@ export default {
   wrapper: {
     margin: 'auto',
     textAlign: 'center',
-    paddingTop: '10px',
+    paddingTop: '2%',
   },
 
   img: {
-    width: '64px',
-    padding: '15px',
+    width: '6%',
+    padding: '0.8%',
   }
 };
