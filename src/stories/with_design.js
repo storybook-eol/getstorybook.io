@@ -3,10 +3,6 @@ import { Flex, Box } from 'reflexbox';
 const { localStorage } = window;
 
 const styles = {
-  design: {
-    width: '100%',
-  },
-
   toolbar: {
     marginBottom: 10,
   },
@@ -86,8 +82,8 @@ export default class WithDesign extends React.Component {
     const buttons = [
       ['Side by Side', 'COMPARE'],
       ['One After Other', 'SHOW_BOTH'],
-      ['Design', 'SHOW_DESIGN'],
       ['Implementation', 'SHOW_IMPLEMENTATION'],
+      ['Design', 'SHOW_DESIGN'],
     ].map(([caption, typeName]) => {
       const style = {
         ...styles.toolbarButton,
@@ -112,13 +108,18 @@ export default class WithDesign extends React.Component {
     );
   }
 
-  renderDesign() {
+  renderDesign(options = {}) {
+    const { scaleImage = true } = options;
     const { design } = this.props;
+    const designStyle = {};
+    if (scaleImage) {
+      designStyle.width = '100%';
+    }
 
     return (
       <div>
         <div style={styles.container}>
-          <img ref='design' style={styles.design} src={design} />
+          <img ref='design' style={designStyle} src={design} />
         </div>
       </div>
     );
@@ -150,7 +151,7 @@ export default class WithDesign extends React.Component {
         return (
           <div style={styles.wrapper} >
             {this.renderToolbar()}
-            {this.renderDesign()}
+            {this.renderDesign({scaleImage: false})}
           </div>
         );
 

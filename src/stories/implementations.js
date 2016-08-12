@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Homepage/Header';
+import Logo from '../components/Homepage/Logo';
 import Container from '../components/Container';
 
 export default {
@@ -7,5 +8,8 @@ export default {
     <Container>
       <Header />
     </Container>
+  ),
+  'Homepage.logo': (
+    <Logo />
   ),
 };

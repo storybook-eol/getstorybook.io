@@ -16,5 +16,13 @@ export default {
     note: `
       Use 15 as the font size.
     `
-  }
+  },
+
+  "Homepage.logo": {
+    design: require('../design/homepage/logo.png'),
+    note: `
+      Here we use the font as "Arial".
+      That's because, we need to get the same logo on every browser.
+    `
+  },
 };
