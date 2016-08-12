@@ -7,8 +7,19 @@ const styles = {
     width: '100%',
   },
 
+  toolbar: {
+    marginBottom: 10,
+  },
+
   toolbarButton: {
     marginRight: 10,
+    border: 0,
+    backgroundColor: '#fff',
+    textTransform: 'uppercase',
+    cursor: 'pointer',
+    outline: 0,
+    letterSpacing: 0.5,
+    WebkitFontSmoothing: 'antialiased',
   },
 
   wrapper: {
@@ -21,6 +32,10 @@ const styles = {
     fontSize: 20,
     margin: "10px 0",
     padding: "0",
+  },
+
+  container: {
+    border: '1px dashed #DDD',
   }
 };
 
@@ -29,22 +44,70 @@ export default class WithDesign extends React.Component {
     super(...args);
     const type = localStorage.getItem('WITH_DESIGN_TYPE') || 'COMPARE';
     this.state = { type };
+
+    this.calculateScale = this.calculateScale.bind(this);
+  }
+
+  calculateScale() {
+    const designImage = this.refs.design;
+    if (!designImage) {
+      this.setState({ implementationScale: 1 });
+      return;
+    }
+
+    const implementationScale = designImage.width / designImage.naturalWidth;
+    this.setState({ implementationScale });
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.calculateScale);
+    this.calculateScale();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.calculateScale);
   }
 
   renderToolbar() {
+    const { type: currentType } = this.state;
+
     const changeState = (type) => {
       return () => {
         localStorage.setItem('WITH_DESIGN_TYPE', type);
         this.setState({ type });
+
+        // We need to update
+        setTimeout(() => {
+          this.calculateScale();
+        }, 50);
       };
     };
 
+    const buttons = [
+      ['Side by Side', 'COMPARE'],
+      ['One After Other', 'SHOW_BOTH'],
+      ['Design', 'SHOW_DESIGN'],
+      ['Implementation', 'SHOW_IMPLEMENTATION'],
+    ].map(([caption, typeName]) => {
+      const style = {
+        ...styles.toolbarButton,
+        fontWeight: currentType === typeName? 600 : 400,
+      };
+
+      return (
+        <button
+          style={style}
+          onClick={changeState(typeName)}
+          key={typeName}
+        >
+          {caption}
+        </button>
+      );
+    });
+
     return (
-      <div>
-        <button style={styles.toolbarButton} onClick={changeState('COMPARE')}>Compare</button>
-        <button style={styles.toolbarButton} onClick={changeState('SHOW_DESIGN')}>Show Design</button>
-        <button style={styles.toolbarButton} onClick={changeState('SHOW_IMPLEMENTATION')}>Show Implementation</button>
-        <button style={styles.toolbarButton} onClick={changeState('SHOW_BOTH')}>One After Other</button>
+      <div style={styles.toolbar}>
+        {buttons}
       </div>
     );
   }
@@ -54,19 +117,27 @@ export default class WithDesign extends React.Component {
 
     return (
       <div>
-        <h3 style={styles.heading}>Design</h3>
-        <img style={styles.design} src={design} />
+        <div style={styles.container}>
+          <img ref='design' style={styles.design} src={design} />
+        </div>
       </div>
     );
   }
 
   renderImplementation() {
     const { children } = this.props;
+    const { implementationScale = 1 } = this.state;
+
+    const containerStyle = {
+      ...styles.container,
+      zoom: implementationScale,
+    };
 
     return (
       <div>
-        <h3 style={styles.heading}>Implementation</h3>
-        {children}
+        <div style={containerStyle}>
+          {children}
+        </div>
       </div>
     );
   }
