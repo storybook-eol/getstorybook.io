@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Homepage/Header';
 import Logo from '../components/Homepage/Logo';
+import Heading from '../components/Homepage/Heading';
 import Container from '../components/Container';
 
 export default {
@@ -11,5 +12,10 @@ export default {
   ),
   'Homepage.logo': (
     <Logo />
+  ),
+  'Homepage.heading': (
+    <Container>
+      <Heading />
+    </Container>
   ),
 };

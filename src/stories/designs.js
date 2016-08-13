@@ -25,4 +25,8 @@ export default {
       That's because, we need to get the same logo on every browser.
     `
   },
+
+  "Homepage.heading": {
+    design: require('../design/homepage/heading.png'),
+  }
 };

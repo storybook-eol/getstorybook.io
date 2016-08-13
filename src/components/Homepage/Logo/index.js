@@ -3,8 +3,12 @@ import styles from './styles';
 
 class Logo extends Component {
   render() {
+    const containerStyles = {
+      ...styles.container,
+      ...this.props.style,
+    };
     return (
-      <div style={ styles.container }>
+      <div style={ containerStyles }>
         <span style={ styles.span.a }>S</span>
         <span style={ styles.span.b }>T</span>
         <span style={ styles.span.c }>O</span>
