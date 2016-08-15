@@ -4,7 +4,7 @@ const styles = {
   container: {
     ...theme.base,
     ...theme.text,
-    margin: '25px 0',
+    margin: '50px 0',
     padding: '50px 0 70px 0',
     textAlign: 'center',
   },
