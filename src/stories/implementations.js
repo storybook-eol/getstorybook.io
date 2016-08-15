@@ -8,6 +8,9 @@ import Features from '../components/Homepage/Features';
 import GettingStarted from '../components/Homepage/GettingStarted';
 import MainLinks from '../components/Homepage/MainLinks';
 import Addon from '../components/Homepage/Addon';
+import AddonList from '../components/Homepage/AddonList';
+import Demo from '../components/Homepage/Demo';
+import Footer from '../components/Homepage/Footer';
 
 export default {
   'Homepage.page': (
@@ -21,6 +24,9 @@ export default {
   ),
   'Homepage.heading': (
     <Heading />
+  ),
+  'Homepage.demo': (
+    <Demo/>
   ),
   'Homepage.platforms': (
     <Platforms />
@@ -45,5 +51,11 @@ export default {
       `}
       link="http://google.com"
     />
+  ),
+  'Homepage.addon-list': (
+    <AddonList/>
+  ),
+  'Homepage.footer': (
+    <Footer/>
   ),
 };

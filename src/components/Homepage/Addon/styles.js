@@ -4,7 +4,11 @@ export default {
   container: {
     ...theme.base,
     width: 800,
-    margin: '10px 0',
+    margin: '60px auto',
+  },
+
+  box: {
+    padding: "0 20px",
   },
 
   heading: {
@@ -27,5 +31,9 @@ export default {
     color: '#565AFF',
     fontSize: 18,
     textDecoration: 'none'
+  },
+
+  content: {
+    textAlign: 'left',
   }
 };

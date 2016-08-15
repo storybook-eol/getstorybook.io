@@ -3,7 +3,7 @@ import styles from '../../theme';
 export default {
   container: {
     ...styles.base,
-    border: '3px dashed #EEE',
+    border: '3px dashed #00BCD4',
     padding: '25px 0',
     fontSize: 70,
     textAlign: 'center',

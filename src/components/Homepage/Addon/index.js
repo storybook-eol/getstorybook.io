@@ -5,21 +5,23 @@ import { Flex, Box } from 'reflexbox';
 const Addon = ({ name, image, description, link }) => (
   <div style={styles.container}>
     <Flex>
-      <Box col={6} p={2}>
-        <div>
+      <Box col={6}>
+        <div style={styles.box}>
           <div style={styles.heading}>{name}</div>
           <img style={styles.image} src={image}/>
         </div>
       </Box>
-      <Box col={6} p={2}>
-        <div
-          style={styles.description}
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
-        <br/>
-        <a style={styles.link} href={link}>
-          USE THIS ADDON
-        </a>
+      <Box col={6}>
+        <div style={{...styles.content, ...styles.box}}>
+          <div
+            style={styles.description}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+          <br/>
+          <a style={styles.link} href={link}>
+            USE THIS ADDON
+          </a>
+        </div>
       </Box>
     </Flex>
   </div>
