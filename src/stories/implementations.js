@@ -5,6 +5,8 @@ import Logo from '../components/Homepage/Logo';
 import Heading from '../components/Homepage/Heading';
 import Platforms from '../components/Homepage/Platforms';
 import Features from '../components/Homepage/Features';
+import GettingStarted from '../components/Homepage/GettingStarted';
+import MainLinks from '../components/Homepage/MainLinks';
 
 export default {
   'Homepage.page': (
@@ -24,5 +26,11 @@ export default {
   ),
   'Homepage.features': (
     <Features />
+  ),
+  'Homepage.getting-started': (
+    <GettingStarted />
+  ),
+  'Homepage.main-links': (
+    <MainLinks />
   ),
 };

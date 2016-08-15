@@ -3,6 +3,8 @@ import Header from './Header';
 import Heading from './Heading';
 import Platforms from './Platforms';
 import Features from './Features';
+import GettingStarted from './GettingStarted';
+import MainLinks from './MainLinks';
 
 const Homepage = () => (
   <div>
@@ -10,6 +12,8 @@ const Homepage = () => (
     <Heading />
     <Platforms />
     <Features />
+    <GettingStarted />
+    <MainLinks />
   </div>
 );
 

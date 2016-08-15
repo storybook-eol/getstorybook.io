@@ -10,7 +10,7 @@ LI.propTypes = {
   children: React.PropTypes.string,
 };
 
-const Header = () => (
+const Features = () => (
   <div style={styles.container}>
     <div style={styles.heading}>FEATURES</div>
     <ul style={styles.ul}>
@@ -25,4 +25,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Features;
