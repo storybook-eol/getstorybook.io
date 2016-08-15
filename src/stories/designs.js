@@ -37,7 +37,7 @@ export default {
     `
   },
 
-  "Homepage.flatform": {
+  "Homepage.platforms": {
     design: require('../design/homepage/flatform.png'),
   },
 
