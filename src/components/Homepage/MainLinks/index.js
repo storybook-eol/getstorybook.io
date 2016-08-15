@@ -13,6 +13,12 @@ export const Link = ({ icon, caption, href }) => (
   </div>
 );
 
+Link.propTypes = {
+  link: React.PropTypes.string,
+  caption: React.PropTypes.string,
+  href: React.PropTypes.string,
+};
+
 const MainLinks = () => (
   <Container>
     <div style={styles.container}>

@@ -7,6 +7,7 @@ import Platforms from '../components/Homepage/Platforms';
 import Features from '../components/Homepage/Features';
 import GettingStarted from '../components/Homepage/GettingStarted';
 import MainLinks from '../components/Homepage/MainLinks';
+import Addon from '../components/Homepage/Addon';
 
 export default {
   'Homepage.page': (
@@ -32,5 +33,17 @@ export default {
   ),
   'Homepage.main-links': (
     <MainLinks />
+  ),
+  'Homepage.addon': (
+    <Addon
+      name="Action Logger"
+      image={require('../design/homepage/addon-sample-image.png')}
+      description={`
+        Action Logger is something similar to the Chrome's dev console.
+        <br/>
+        With that, you can debug events in UI components and inspect their output.
+      `}
+      link="http://google.com"
+    />
   ),
 };
