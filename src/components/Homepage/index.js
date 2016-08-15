@@ -1,15 +1,16 @@
 import React from 'react';
-import Container from '../Container';
 import Header from './Header';
 import Heading from './Heading';
 import Platforms from './Platforms';
+import Features from './Features';
 
 const Homepage = () => (
-  <Container>
+  <div>
     <Header />
     <Heading />
     <Platforms />
-  </Container>
+    <Features />
+  </div>
 );
 
 export default Homepage;

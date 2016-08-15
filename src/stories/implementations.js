@@ -3,29 +3,26 @@ import Homepage from '../components/Homepage';
 import Header from '../components/Homepage/Header';
 import Logo from '../components/Homepage/Logo';
 import Heading from '../components/Homepage/Heading';
-import Container from '../components/Container';
 import Platforms from '../components/Homepage/Platforms';
+import Features from '../components/Homepage/Features';
 
 export default {
   'Homepage.page': (
     <Homepage />
   ),
   'Homepage.header': (
-    <Container>
-      <Header />
-    </Container>
+    <Header />
   ),
   'Homepage.logo': (
     <Logo />
   ),
   'Homepage.heading': (
-    <Container>
-      <Heading />
-    </Container>
+    <Heading />
   ),
   'Homepage.platforms': (
-    <Container>
-      <Platforms />
-    </Container>
+    <Platforms />
+  ),
+  'Homepage.features': (
+    <Features />
   ),
 };
