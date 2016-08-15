@@ -28,5 +28,55 @@ export default {
 
   "Homepage.heading": {
     design: require('../design/homepage/heading.png'),
+  },
+
+  "Homepage.demo": {
+    design: require('../design/homepage/demo.png'),
+    note: `
+      Here we'll be using a GIF demo on how to use storybook.
+    `
+  },
+
+  "Homepage.flatform": {
+    design: require('../design/homepage/flatform.png'),
+  },
+
+  "Homepage.features": {
+    design: require('../design/homepage/features.png'),
+  },
+
+  "Homepage.getting-started": {
+    design: require('../design/homepage/getting-started.png'),
+  },
+
+  "Homepage.main-links": {
+    design: require('../design/homepage/main-links.png'),
+    note: `
+      Use the logos in the "src/design/homepage" directory.
+      Add following links:
+
+      * Slack: https://storybooks-slackin.herokuapp.com/
+      * Docs: /docs
+      * Newsletter: https://tinyletter.com/storybooks
+    `
+  },
+
+  "Homepage.addon": {
+    design: require('../design/homepage/addon.png'),
+    note: `
+      Use this addon is a link. Add a dummy link for now.
+      We can use something working later on.
+    `
+  },
+
+  "Homepage.addon-list": {
+    design: require('../design/homepage/addon-list.png'),
+  },
+
+  "Homepage.footer": {
+    design: require('../design/homepage/footer.png'),
+    note: `
+      Use the logos in the "src/design/homepage" directory.
+    `
   }
 };
