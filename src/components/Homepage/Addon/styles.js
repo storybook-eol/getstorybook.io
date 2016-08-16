@@ -3,12 +3,12 @@ import theme from '../../theme';
 export default {
   container: {
     ...theme.base,
-    width: 800,
-    margin: '60px auto',
+    maxWidth: 800,
+    margin: '6% auto',
   },
 
   box: {
-    padding: "0 20px",
+    padding: '0 3%',
   },
 
   heading: {
@@ -17,7 +17,7 @@ export default {
     fontSize: 20,
     letterSpacing: 1,
     textAlign: 'center',
-    margin: '0 0 20px 0',
+    margin: '0 0 4% 0',
   },
 
   description: {
@@ -33,7 +33,9 @@ export default {
     textDecoration: 'none'
   },
 
-  content: {
-    textAlign: 'left',
+  content: {},
+
+  image: {
+    width: '100%',
   }
 };

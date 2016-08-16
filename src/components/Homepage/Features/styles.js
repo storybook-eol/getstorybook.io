@@ -3,8 +3,8 @@ import theme from '../../theme';
 const styles = {
   container: {
     ...theme.base,
-    margin: '25px 0',
-    padding: '70px 0 70px 0',
+    margin: '3% 0',
+    padding: '7% 0',
     textAlign: 'center',
     backgroundColor: '#424242',
     color: '#FFF',
@@ -13,7 +13,7 @@ const styles = {
   heading: {
     fontSize: 28,
     letterSpacing: '2px',
-    margin: '0 0 50px 0'
+    margin: '0 0 5% 0'
   },
 
   ul: {

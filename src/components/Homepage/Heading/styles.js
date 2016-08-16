@@ -4,7 +4,7 @@ export default {
   container: {
     ...theme.base,
     textAlign: 'center',
-    padding: '110px 0 0 0',
+    padding: '12% 0 0 0',
   },
 
   logo: {

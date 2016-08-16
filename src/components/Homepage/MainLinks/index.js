@@ -19,34 +19,76 @@ Link.propTypes = {
   href: React.PropTypes.string,
 };
 
-const MainLinks = () => (
-  <Container>
-    <div style={styles.container}>
-      <Flex>
-        <Box>
-          <Link
-            icon={require('../../../design/homepage/slack-icon.png')}
-            caption="Join Us on Slack"
-            href="https://storybooks-slackin.herokuapp.com/"
-          />
-        </Box>
-        <Box>
-          <Link
-            icon={require('../../../design/homepage/docs-icon.png')}
-            caption="Read Docs"
-            href="/docs"
-          />
-        </Box>
-        <Box>
-          <Link
-            icon={require('../../../design/homepage/mail-icon.png')}
-            caption="Get Newsletter"
-            href="https://tinyletter.com/storybooks"
-          />
-        </Box>
-      </Flex>
-    </div>
-  </Container>
-);
+
+class MainLinks extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      col: false,
+    };
+  }
+
+  handleResize() {
+    const width = window.innerWidth;
+
+    if (width < 703) {
+      this.setState({
+        col: true,
+      });
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
+
+  render() {
+    const { col } = this.state;
+
+    return (
+      <Container>
+        <div style={styles.container}>
+          <Flex
+            align="center"
+            justify="center"
+            column={col}
+          >
+            <Box
+              auto
+              style={styles.box}
+            >
+              <Link
+                icon={require('../../../design/homepage/slack-icon.png')}
+                caption="Join Us on Slack"
+                href="https://storybooks-slackin.herokuapp.com/"
+              />
+            </Box>
+            <Box
+              auto
+              style={styles.box}
+            >
+              <Link
+                icon={require('../../../design/homepage/docs-icon.png')}
+                caption="Read Docs"
+                href="/docs"
+              />
+            </Box>
+            <Box
+              auto
+              style={styles.box}
+            >
+              <Link
+                icon={require('../../../design/homepage/mail-icon.png')}
+                caption="Get Newsletter"
+                href="https://tinyletter.com/storybooks"
+              />
+            </Box>
+          </Flex>
+        </div>
+      </Container>    
+    );   
+  }
+}
 
 export default MainLinks;

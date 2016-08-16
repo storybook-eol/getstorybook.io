@@ -8,7 +8,7 @@ const demo = require('../../../design/homepage/demo-sample-image.png');
 const AddonList = () => (
   <Container>
     <div style={styles.container}>
-      <img src={demo}/>
+      <img style={styles.img} src={demo}/>
     </div>
   </Container>
 );

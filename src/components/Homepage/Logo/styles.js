@@ -4,12 +4,11 @@ export default {
   container: {
     ...styles.base,
     border: '3px dashed #00BCD4',
-    padding: '25px 0',
-    fontSize: 70,
+    padding: '2% 5% 2% 5%',
     textAlign: 'center',
     fontWeight: 'bold',
     letterSpacing: 2,
-    width: 570,
+    maxWidth: 570,
     fontFamily: 'Arial',
   },
 
