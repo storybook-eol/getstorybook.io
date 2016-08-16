@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import styles from './styles';
 import { Flex, Box } from 'reflexbox';
 import Container from '../Container';
@@ -6,7 +6,7 @@ import Container from '../Container';
 export const Link = ({ icon, caption, href }) => (
   <div style={styles.link}>
     <a style={styles.a} href={href}>
-      <img style={styles.icon} src={icon}/>
+      <img style={styles.icon} src={icon} role="presentation"/>
       <br/>
       { caption }
     </a>
