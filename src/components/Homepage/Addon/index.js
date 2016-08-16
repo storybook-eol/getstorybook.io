@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import styles from './styles';
 import { Flex, Box } from 'reflexbox';
 
@@ -8,7 +8,7 @@ const Addon = ({ name, image, description, link }) => (
       <Box col={6}>
         <div style={styles.box}>
           <div style={styles.heading}>{name}</div>
-          <img style={styles.image} src={image}/>
+          <img style={styles.image} src={image} role="presentation"/>
         </div>
       </Box>
       <Box col={6}>
