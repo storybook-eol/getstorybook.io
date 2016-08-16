@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles';
-import Container from '../Container';
 
 const LI = ({children}) => (
   <li style={styles.li}>{children}</li>
