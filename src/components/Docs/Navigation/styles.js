@@ -5,7 +5,7 @@ const styles = {
     ...theme.base,
     ...theme.text,
     borderRight: '1px solid #ECECEC',
-    marginRight: 20,
+    marginRight: 30,
   },
 
   h3: {
