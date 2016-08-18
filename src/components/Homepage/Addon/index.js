@@ -23,8 +23,8 @@ class Addon extends Component {
 
     if (width < 775) {
       stateObj.col = true;
-      stateObj.headingFontSize = 16;
-      stateObj.textFontSize = 14;
+      stateObj.headingFontSize = 18;
+      stateObj.textFontSize = 17;
     }
 
     this.setState(stateObj);
@@ -46,6 +46,7 @@ class Addon extends Component {
     const { name, image, description, link } = this.props;
     const { col, headingFontSize, textFontSize } = this.state;
 
+    let colCount = (col) ? 12 : 6;
     styles.content = {
       textAlign: (col) ? 'center' : 'left',
     };
@@ -71,13 +72,13 @@ class Addon extends Component {
             justify="center"
             column={col}
           >
-            <Box col={6}>
+            <Box col={colCount}>
               <div style={styles.box}>
                 <div style={headingStyles}>{name}</div>
                 <img style={styles.image} src={image}/>
               </div>
             </Box>
-            <Box col={6}>
+            <Box col={colCount}>
               <div style={{...styles.content, ...styles.box}}>
                 <div
                   style={descStyles}
