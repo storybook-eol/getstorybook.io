@@ -24,7 +24,7 @@ class Addon extends Component {
     if (width < 775) {
       stateObj.col = true;
       stateObj.headingFontSize = 18;
-      stateObj.textFontSize = 17;
+      stateObj.textFontSize = 16;
     }
 
     this.setState(stateObj);
