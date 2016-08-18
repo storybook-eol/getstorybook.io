@@ -15,6 +15,7 @@ import Footer from '../components/Homepage/Footer';
 import DocsHeader from '../components/Docs/DocsHeader';
 import Navigation from '../components/Docs/Navigation';
 import Content from '../components/Docs/Content';
+import { Router } from 'react-router'
 
 export default {
   'Homepage.page': (
@@ -73,20 +74,22 @@ export default {
     <Navigation
       sections={[
         {
+          id: 'basics',
           heading: 'Basics',
           items: [
-            { caption: 'Getting Started', link: '/basics/getting-started' },
-            { caption: 'Writing Stories', link: '/basics/getting-started' },
-            { caption: 'Build as a Static App', link: '/basics/getting-started' },
+            { id: 'getting-started', title: 'Getting Started' },
+            { id: 'writing-stories', title: 'Writing Stories' },
+            { id: 'build-as-a-static-app', title: 'Build as a Static App' },
           ]
         },
 
         {
+          id: 'configurations',
           heading: 'Configuations',
           items: [
-            { caption: 'Default Config', link: '/basics/getting-started' },
-            { caption: 'Webpack', link: '/basics/getting-started' },
-            { caption: 'Babel', link: '/basics/getting-started' },
+            { id: 'default-config', title: 'Default Config' },
+            { id: 'webpack', title: 'Webpack' },
+            { id: 'babel', title: 'Babel' },
           ]
         },
       ]}

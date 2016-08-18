@@ -17,7 +17,17 @@ const styles = {
     padding: 0,
     listStyle: 'none',
     lineHeight: '36px',
-  }
+  },
+
+  item: {
+    ...theme.text,
+    textDecoration: 'none',
+  },
+};
+
+styles.selectedItem = {
+  ...styles.item,
+  fontWeight: 600,
 };
 
 export default styles;
