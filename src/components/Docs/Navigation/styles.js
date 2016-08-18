@@ -17,7 +17,12 @@ const styles = {
     padding: 0,
     listStyle: 'none',
     lineHeight: '36px',
-  }
+  },
+
+  a: {
+    textDecoration: 'none',
+    color: '#484848',
+  },
 };
 
 export default styles;

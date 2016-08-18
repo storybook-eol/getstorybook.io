@@ -17,7 +17,9 @@ class Navigation extends React.Component {
 
   renderItem(item) {
     const { selectedItem } = this.props;
-    const style = {};
+    const style = {
+      ...styles.a,
+    };
     if (item.caption === selectedItem) {
       style.fontWeight = 600;
     }
