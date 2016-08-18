@@ -13,12 +13,8 @@ class Navigation extends React.Component {
   }
 
   renderItem(section, item) {
-    const { prefix = '', selectedItem } = this.props;
+    const { prefix = '' } = this.props;
     const href = `${prefix}/docs/${section.id}/${item.id}`;
-    const style = {};
-    if (item.title === selectedItem) {
-      style.fontWeight = 600;
-    }
 
     return (
       <Link style={styles.item} activeStyle={styles.selectedItem} to={href}>
