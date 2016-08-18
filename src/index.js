@@ -9,7 +9,8 @@ ReactDOM.render(
   (
     <Router history={browserHistory}>
       <Route path="/" component={Homepage} />
-      <Route path="/docs" component={Docs} />
+      <Route path="/docs(/:sectionId/:itemId)" component={Docs} />
+
     </Router>
   ),
   document.getElementById('root')
