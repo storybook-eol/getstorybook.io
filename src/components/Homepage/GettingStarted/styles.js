@@ -10,7 +10,6 @@ const styles = {
   },
 
   heading: {
-    fontSize: 28,
     letterSpacing: '2px',
     margin: '0 0 4% 0'
   },
@@ -18,7 +17,6 @@ const styles = {
   pre: {
     backgroundColor: '#F0F0F0',
     padding: '3% 0 3% 15%',
-    fontSize: 20,
     margin: 'auto',
     maxWidth: 400,
     textAlign: 'left',

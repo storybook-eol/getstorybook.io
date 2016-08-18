@@ -14,12 +14,10 @@ export default {
   h2: {
     ...theme.text,
     fontWeight: 400,
-    fontSize: 25,
     lineHeight: '30px',
   },
 
   love: {
     color: 'red',
-    fontSize: 35
   }
 };

@@ -11,7 +11,6 @@ const styles = {
   },
 
   heading: {
-    fontSize: 28,
     letterSpacing: '2px',
     margin: '0 0 5% 0'
   },
@@ -23,7 +22,6 @@ const styles = {
   },
 
   li: {
-    fontSize: 20,
     padding: '4px 0',
   }
 };

@@ -8,17 +8,26 @@ class Addon extends Component {
 
     this.state = {
       col: false,
+      headingFontSize: 20,
+      textFontSize: 18,
     };
   }
 
   handleResize() {
     const width = window.innerWidth;
+    const stateObj = {
+      col: false,
+      headingFontSize: 20,
+      textFontSize: 18,
+    };
 
     if (width < 775) {
-      this.setState({
-        col: true,
-      });
+      stateObj.col = true;
+      stateObj.headingFontSize = 16;
+      stateObj.textFontSize = 14;
     }
+
+    this.setState(stateObj);
   }
 
   componentDidMount() {
@@ -28,15 +37,30 @@ class Addon extends Component {
   componentWillUnmount() {
     this.setState({
       col: false,
+      headingFontSize: 20,
+      textFontSize: 18,
     });
   }
 
   render() {
     const { name, image, description, link } = this.props;
-    const { col } = this.state;
+    const { col, headingFontSize, textFontSize } = this.state;
 
     styles.content = {
       textAlign: (col) ? 'center' : 'left',
+    };
+
+    const headingStyles = {
+      ...styles.heading,
+      fontSize: headingFontSize,
+    };
+    const descStyles = {
+      ...styles.description,
+      fontSize: textFontSize,
+    };
+    const linkStyles = {
+      ...styles.link,
+      fontSize: textFontSize,
     };
 
     return(
@@ -49,18 +73,18 @@ class Addon extends Component {
           >
             <Box col={6}>
               <div style={styles.box}>
-                <div style={styles.heading}>{name}</div>
+                <div style={headingStyles}>{name}</div>
                 <img style={styles.image} src={image}/>
               </div>
             </Box>
             <Box col={6}>
               <div style={{...styles.content, ...styles.box}}>
                 <div
-                  style={styles.description}
+                  style={descStyles}
                   dangerouslySetInnerHTML={{ __html: description }}
                 />
                 <br/>
-                <a style={styles.link} href={link}>
+                <a style={linkStyles} href={link}>
                   USE THIS ADDON
                 </a>
               </div>

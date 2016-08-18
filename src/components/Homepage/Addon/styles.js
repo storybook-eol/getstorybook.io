@@ -14,7 +14,6 @@ export default {
   heading: {
     ...theme.text,
     textTransform: 'uppercase',
-    fontSize: 20,
     letterSpacing: 1,
     textAlign: 'center',
     margin: '0 0 4% 0',
@@ -22,14 +21,12 @@ export default {
 
   description: {
     ...theme.text,
-    fontSize: 18,
     lineHeight: '25px',
     margin: '40px 0 0 0',
   },
 
   link: {
     color: '#565AFF',
-    fontSize: 18,
     textDecoration: 'none'
   },
 

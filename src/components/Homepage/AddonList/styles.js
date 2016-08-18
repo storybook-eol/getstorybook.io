@@ -6,12 +6,10 @@ const styles = {
     ...theme.text,
     margin: '10% 0',
     textAlign: 'center',
-    fontSize: 20,
     lineHeight: '28px',
   },
 
   heading: {
-    fontSize: 28,
     letterSpacing: '2px',
     margin: '0 0 2% 0',
   },

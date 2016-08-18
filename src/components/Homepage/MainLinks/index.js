@@ -26,17 +26,26 @@ class MainLinks extends Component {
 
     this.state = {
       col: false,
+      dynamicFontSize: 20,
     };
   }
 
   handleResize() {
     const width = window.innerWidth;
+    const stateObj = {
+      col: false,
+      dynamicFontSize: 20,
+    };
 
-    if (width < 600) {
-      this.setState({
-        col: true,
-      });
+    if (width < 775) {
+      stateObj.dynamicFontSize = 16;
     }
+
+    if (width < 680) {
+      stateObj.col = true;
+    }
+    
+    this.setState(stateObj);
   }
 
   componentDidMount() {
@@ -46,15 +55,20 @@ class MainLinks extends Component {
   componentWillUnmount() {
     this.setState({
       col: false,
+      dynamicFontSize: 20,
     });
   }
 
   render() {
-    const { col } = this.state;
+    const { col, dynamicFontSize } = this.state;
+    const conStyles = {
+      ...styles.container,
+      fontSize: dynamicFontSize,
+    };
 
     return (
       <Container>
-        <div style={styles.container}>
+        <div style={conStyles}>
           <Flex
             align="center"
             justify="center"

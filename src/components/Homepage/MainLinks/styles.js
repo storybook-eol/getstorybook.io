@@ -12,7 +12,6 @@ export default {
   link: {
     width: 250,
     textTransform: 'uppercase',
-    fontSize: 20,
     letterSpacing: 1,
     textAlign: 'center',
   },
