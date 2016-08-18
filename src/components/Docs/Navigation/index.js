@@ -1,10 +1,13 @@
 import React from 'react';
+import styles from './styles';
 import Container from '../Container';
 
 class Navigation extends React.Component {
   renderHeading(caption) {
     const { selectedSection } = this.props;
-    const style = {};
+    const style = {
+      ...styles.h3,
+    };
     if (caption === selectedSection) {
       style.textDecoration = 'underline';
     }
@@ -30,18 +33,20 @@ class Navigation extends React.Component {
     const { sections } = this.props;
     return (
       <Container>
-        {sections.map((section) => (
-          <div key={section.heading}>
-            {this.renderHeading(section.heading)}
-            <ul>
-              {section.items.map((item) => (
-                <li key={`${section.heading}:${item.caption}`}>
-                  {this.renderItem(item)}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div style={ styles.container }>
+          {sections.map((section) => (
+            <div key={section.heading}>
+              {this.renderHeading(section.heading)}
+              <ul style={styles.ul}>
+                {section.items.map((item) => (
+                  <li key={`${section.heading}:${item.caption}`}>
+                    {this.renderItem(item)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </Container>
     );
   }

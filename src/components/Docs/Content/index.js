@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import styles from './styles';
 import Container from '../Container';
 
 const input = `
@@ -18,8 +19,8 @@ const input = `
 
 const Content = ({title, mdText}) => (
   <Container>
-    <div>
-      <h2>{ title }</h2>
+    <div style={ styles.container }>
+      <h2 style={ styles.h2 }>{ title }</h2>
       
       <p>
         You need to write stories to show your components inside React Storybook.<br/>
