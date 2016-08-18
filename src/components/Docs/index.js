@@ -17,7 +17,7 @@ class Docs extends React.Component {
           htmlAttributes={{"lang": "en", "amp": undefined}}
           title="Documentation | React Storybook"
         />
-        <Header />
+        <Header currentSection="docs"/>
         <DocsHeader />
         <Container>
         <Flex>

@@ -14,7 +14,7 @@ export default {
 
   links: {
     ...theme.text,
-    fontSize: 20,
+    fontSize: 15,
   },
 
   link: {

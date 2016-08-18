@@ -12,11 +12,16 @@ class Navigation extends React.Component {
   }
 
   renderItem(section, item) {
-    const { prefix = '' } = this.props;
+    const { prefix = '', selectedSection, selectedItem } = this.props;
     const href = `${prefix}/docs/${section.id}/${item.id}`;
 
+    let style = styles.item;
+    if (selectedSection === section.id && selectedItem === item.id) {
+      style = styles.selectedItem;
+    }
+
     return (
-      <Link style={styles.item} activeStyle={styles.selectedItem} to={href}>
+      <Link style={style} to={href}>
         {item.title}
       </Link>
     );

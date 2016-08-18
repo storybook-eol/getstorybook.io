@@ -6,12 +6,14 @@ class DocsContainer extends React.Component {
   render() {
     const { sectionId, itemId } = this.props.params;
     const selectedItem = !sectionId? getFirstItem() : getItem(sectionId, itemId);
+    const selectedSectionId = sectionId || 'basics';
+    const selectedItemId = selectedItem.id;
 
     const props = {
       sections: getNavigationData(),
       selectedItem,
-      selectedSectionId: sectionId,
-      selectedItemId: itemId,
+      selectedSectionId,
+      selectedItemId,
     };
 
     return (<Docs {...props}/>);

@@ -7,7 +7,7 @@ const DocsHeader = () => (
     <div style={styles.container}>
       <h1 style={styles.h1}>Documentation for React Storybook</h1>
       <div style={styles.links}>
-        Docs for:&nbsp;
+        Other Docs:&nbsp;
         <a
           style={styles.link}
           href="https://github.com/kadirahq/react-native-storybook"
