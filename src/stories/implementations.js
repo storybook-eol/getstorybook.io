@@ -70,7 +70,29 @@ export default {
     <DocsHeader />
   ),
   'Docs.navigation': (
-    <Navigation />
+    <Navigation
+      sections={[
+        {
+          heading: 'Basics',
+          items: [
+            { caption: 'Getting Started', link: '/basics/getting-started' },
+            { caption: 'Writing Stories', link: '/basics/getting-started' },
+            { caption: 'Build as a Static App', link: '/basics/getting-started' },
+          ]
+        },
+
+        {
+          heading: 'Configuations',
+          items: [
+            { caption: 'Default Config', link: '/basics/getting-started' },
+            { caption: 'Webpack', link: '/basics/getting-started' },
+            { caption: 'Babel', link: '/basics/getting-started' },
+          ]
+        },
+      ]}
+      selectedSection="Basics"
+      selectedItem="Writing Stories"
+    />
   ),
   'Docs.content': (
     <Content
@@ -95,7 +117,7 @@ export default {
             })
             .add('off', () => {
               return <Toggle value={false} onChange={linkTo('Toggle', 'on')} />
-            });  
+            });
         \`\`\`
       `}
     />

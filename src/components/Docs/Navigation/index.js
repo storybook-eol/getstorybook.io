@@ -1,25 +1,56 @@
 import React from 'react';
 import Container from '../Container';
 
-const Navigation = () => (
-  <Container>
-    <div>
-      <h3>Basics</h3>
-      <ul>
-        <li>Getting Started</li>
-        <li>Writing Stories</li>
-        <li>Build as a Static App</li>
-        <li>Command Line Options</li>
-      </ul>
+class Navigation extends React.Component {
+  renderHeading(caption) {
+    const { selectedSection } = this.props;
+    const style = {};
+    if (caption === selectedSection) {
+      style.textDecoration = 'underline';
+    }
 
-      <h3>Configuations</h3>
-      <ul>
-        <li>Webpack Confugurations</li>
-        <li>Babel Configurations</li>
-        <li>Loading Files Dynamically</li>
-      </ul>
-    </div>
-  </Container>
-);
+    return (<h3 style={style}>{caption}</h3>);
+  }
+
+  renderItem(item) {
+    const { selectedItem } = this.props;
+    const style = {};
+    if (item.caption === selectedItem) {
+      style.fontWeight = 600;
+    }
+
+    return (
+      <a style={style} href={item.link}>
+        {item.caption}
+      </a>
+    );
+  }
+
+  render() {
+    const { sections } = this.props;
+    return (
+      <Container>
+        {sections.map((section) => (
+          <div key={section.heading}>
+            {this.renderHeading(section.heading)}
+            <ul>
+              {section.items.map((item) => (
+                <li key={`${section.heading}:${item.caption}`}>
+                  {this.renderItem(item)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </Container>
+    );
+  }
+}
+
+Navigation.propTypes = {
+  sections: React.PropTypes.array,
+  selectedSection: React.PropTypes.string,
+  selectedItem: React.PropTypes.string,
+};
 
 export default Navigation;
