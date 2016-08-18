@@ -1,7 +1,7 @@
 import React from 'react';
 
 const style = {
-  padding: '0 50px',
+  padding: '0 20px',
   maxWidth: 1024,
   margin: 'auto',
 };
