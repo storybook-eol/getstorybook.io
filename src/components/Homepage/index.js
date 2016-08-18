@@ -16,7 +16,7 @@ const Homepage = () => (
       htmlAttributes={{"lang": "en", "amp": undefined}}
       title="Storybook - UI Dev Environment you'll love to use."
     />
-    <Header />
+    <Header currentSection="home"/>
     <Heading />
     <Demo />
     <Platforms />

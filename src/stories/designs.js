@@ -80,6 +80,10 @@ export default {
     `
   },
 
+  "Docs.page": {
+    design: require('../design/docs/docs.png'),
+  },
+
   "Docs.header": {
     design: require('../design/docs/header.png'),
     note: `

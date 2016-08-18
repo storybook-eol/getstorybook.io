@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles';
-import Container from '../Container';
 import { Link } from 'react-router';
 
 class Navigation extends React.Component {
@@ -13,15 +12,16 @@ class Navigation extends React.Component {
   }
 
   renderItem(section, item) {
-    const { prefix = '', selectedItem } = this.props;
+    const { prefix = '', selectedSection, selectedItem } = this.props;
     const href = `${prefix}/docs/${section.id}/${item.id}`;
-    const style = {};
-    if (item.title === selectedItem) {
-      style.fontWeight = 600;
+
+    let style = styles.item;
+    if (selectedSection === section.id && selectedItem === item.id) {
+      style = styles.selectedItem;
     }
 
     return (
-      <Link style={styles.item} activeStyle={styles.selectedItem} to={href}>
+      <Link style={style} to={href}>
         {item.title}
       </Link>
     );
@@ -30,22 +30,20 @@ class Navigation extends React.Component {
   render() {
     const { sections } = this.props;
     return (
-      <Container>
-        <div style={ styles.container }>
-          {sections.map((section) => (
-            <div key={section.heading}>
-              {this.renderHeading(section.heading)}
-              <ul style={styles.ul}>
-                {section.items.map((item) => (
-                  <li key={`${section.heading}:${item.title}`}>
-                    {this.renderItem(section, item)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Container>
+      <div style={ styles.container }>
+        {sections.map((section) => (
+          <div key={section.heading}>
+            {this.renderHeading(section.heading)}
+            <ul style={styles.ul}>
+              {section.items.map((item) => (
+                <li key={`${section.heading}:${item.title}`}>
+                  {this.renderItem(section, item)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     );
   }
 }
