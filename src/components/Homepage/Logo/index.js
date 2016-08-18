@@ -23,11 +23,11 @@ class Logo extends Component {
       dynamicFontSize = 45;
     }
 
-    if (width < 400) {
+    if (width < 415) {
       dynamicFontSize = 35;
     }
 
-    if (width < 300) {
+    if (width < 376) {
       dynamicFontSize = 25;
     }
 
@@ -40,6 +40,12 @@ class Logo extends Component {
     window.addEventListener('resize', this.handleResize.bind(this));
   }
 
+  componentWillUnmount() {
+    this.setState({
+      fontSize: 70,
+    });
+  }
+
   render() {
     const { fontSize } = this.state;
 
@@ -49,7 +55,10 @@ class Logo extends Component {
       fontSize
     };
     return (
-      <Flex>
+      <Flex
+        align="center"
+        justify="center"
+      >
         <div style={ containerStyles }>
           <Box>
             <span style={ styles.span.a }>S</span>

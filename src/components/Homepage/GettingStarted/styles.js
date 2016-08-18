@@ -5,7 +5,7 @@ const styles = {
     ...theme.base,
     ...theme.text,
     margin: '5% 0',
-    padding: '5% 0 7% 0',
+    padding: '5% 0 5% 0',
     textAlign: 'center',
   },
 

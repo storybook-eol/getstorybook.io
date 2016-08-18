@@ -32,7 +32,7 @@ class MainLinks extends Component {
   handleResize() {
     const width = window.innerWidth;
 
-    if (width < 703) {
+    if (width < 600) {
       this.setState({
         col: true,
       });
@@ -41,6 +41,12 @@ class MainLinks extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize.bind(this));
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      col: false,
+    });
   }
 
   render() {
