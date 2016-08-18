@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles';
-import Container from '../Container';
 import { Link } from 'react-router';
 
 class Navigation extends React.Component {
@@ -26,22 +25,20 @@ class Navigation extends React.Component {
   render() {
     const { sections } = this.props;
     return (
-      <Container>
-        <div style={ styles.container }>
-          {sections.map((section) => (
-            <div key={section.heading}>
-              {this.renderHeading(section.heading)}
-              <ul style={styles.ul}>
-                {section.items.map((item) => (
-                  <li key={`${section.heading}:${item.title}`}>
-                    {this.renderItem(section, item)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Container>
+      <div style={ styles.container }>
+        {sections.map((section) => (
+          <div key={section.heading}>
+            {this.renderHeading(section.heading)}
+            <ul style={styles.ul}>
+              {section.items.map((item) => (
+                <li key={`${section.heading}:${item.title}`}>
+                  {this.renderItem(section, item)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     );
   }
 }

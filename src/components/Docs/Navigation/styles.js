@@ -4,12 +4,15 @@ const styles = {
   container: {
     ...theme.base,
     ...theme.text,
-    margin: 0,
+    borderRight: '1px solid #ECECEC',
+    marginRight: 20,
   },
 
   h3: {
-    margin: '25px 0 7px',
+    color: '#000',
+    margin: '25px 0 7px 0',
     padding: 0,
+    fontSize: 20,
   },
 
   ul: {

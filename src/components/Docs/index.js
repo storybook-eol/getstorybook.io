@@ -6,12 +6,10 @@ import Navigation from './Navigation';
 import Content from './Content';
 import Container from './Container';
 import { Flex, Box } from 'reflexbox';
-import { getNavigationData, getItem, getFirstItem } from '../../docs'
 
-class Homepage extends React.Component {
+class Docs extends React.Component {
   render() {
-    const { sectionId, itemId } = this.props.params;
-    const selectedItem = !sectionId? getFirstItem() : getItem(sectionId, itemId);
+    const { sections, selectedItem, selectedItemId, selectedSectionId } = this.props;
 
     return (
       <div>
@@ -25,9 +23,9 @@ class Homepage extends React.Component {
         <Flex>
           <Box col={3}>
             <Navigation
-              sections={getNavigationData()}
-              selectedSection="basics"
-              selectedItem="getting-started"
+              sections={sections}
+              selectedSection={selectedSectionId}
+              selectedItem={selectedItemId}
             />
           </Box>
           <Box>
@@ -40,4 +38,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+export default Docs;

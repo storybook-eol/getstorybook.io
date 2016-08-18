@@ -3,7 +3,7 @@ import theme from '../../theme';
 export default {
   container: {
     ...theme.base,
-    padding: "0 0 45px 0"
+    padding: "0 0 20px 0"
   },
 
   h1: {
