@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import radium, { StyleRoot } from 'radium';
 import styles from './styles';
 import { Flex, Box } from 'reflexbox';
 import Container from '../Container';
@@ -26,7 +27,6 @@ class MainLinks extends Component {
 
     this.state = {
       col: false,
-      dynamicFontSize: 20,
     };
   }
 
@@ -34,12 +34,7 @@ class MainLinks extends Component {
     const width = window.innerWidth;
     const stateObj = {
       col: false,
-      dynamicFontSize: 20,
     };
-
-    if (width < 775) {
-      stateObj.dynamicFontSize = 16;
-    }
 
     if (width < 680) {
       stateObj.col = true;
@@ -55,60 +50,57 @@ class MainLinks extends Component {
   componentWillUnmount() {
     this.setState({
       col: false,
-      dynamicFontSize: 20,
     });
   }
 
   render() {
-    const { col, dynamicFontSize } = this.state;
-    const conStyles = {
-      ...styles.container,
-      fontSize: dynamicFontSize,
-    };
+    const { col } = this.state;
 
     return (
       <Container>
-        <div style={conStyles}>
-          <Flex
-            align="center"
-            justify="center"
-            column={col}
-          >
-            <Box
-              auto
-              style={styles.box}
+        <StyleRoot>
+          <div style={styles.container}>
+            <Flex
+              align="center"
+              justify="center"
+              column={col}
             >
-              <Link
-                icon={require('../../../design/homepage/slack-icon.png')}
-                caption="Join Us on Slack"
-                href="https://storybooks-slackin.herokuapp.com/"
-              />
-            </Box>
-            <Box
-              auto
-              style={styles.box}
-            >
-              <Link
-                icon={require('../../../design/homepage/docs-icon.png')}
-                caption="Read Docs"
-                href="/docs"
-              />
-            </Box>
-            <Box
-              auto
-              style={styles.box}
-            >
-              <Link
-                icon={require('../../../design/homepage/mail-icon.png')}
-                caption="Get Newsletter"
-                href="https://tinyletter.com/storybooks"
-              />
-            </Box>
-          </Flex>
-        </div>
+              <Box
+                auto
+                style={styles.box}
+              >
+                <Link
+                  icon={require('../../../design/homepage/slack-icon.png')}
+                  caption="Join Us on Slack"
+                  href="https://storybooks-slackin.herokuapp.com/"
+                />
+              </Box>
+              <Box
+                auto
+                style={styles.box}
+              >
+                <Link
+                  icon={require('../../../design/homepage/docs-icon.png')}
+                  caption="Read Docs"
+                  href="/docs"
+                />
+              </Box>
+              <Box
+                auto
+                style={styles.box}
+              >
+                <Link
+                  icon={require('../../../design/homepage/mail-icon.png')}
+                  caption="Get Newsletter"
+                  href="https://tinyletter.com/storybooks"
+                />
+              </Box>
+            </Flex>
+          </div>
+        </StyleRoot>
       </Container>    
     );   
   }
 }
 
-export default MainLinks;
+export default radium(MainLinks);

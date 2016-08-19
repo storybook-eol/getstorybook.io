@@ -11,7 +11,11 @@ const styles = {
 
   heading: {
     letterSpacing: '2px',
-    margin: '0 0 4% 0'
+    margin: '0 0 4% 0',
+    fontSize: 28,
+    '@media (max-width: 500px)': {
+      fontSize: 24
+    },
   },
 
   pre: {
@@ -20,6 +24,10 @@ const styles = {
     margin: 'auto',
     maxWidth: 400,
     textAlign: 'left',
+    fontSize: 20,
+    '@media (max-width: 500px)': {
+      fontSize: 16
+    },
   }
 };
 

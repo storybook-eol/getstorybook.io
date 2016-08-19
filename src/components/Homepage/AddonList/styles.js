@@ -7,11 +7,19 @@ const styles = {
     margin: '10% 0',
     textAlign: 'center',
     lineHeight: '28px',
+    fontSize: 20,
+    '@media (max-width: 775px)': {
+      fontSize: 16
+    },
   },
 
   heading: {
     letterSpacing: '2px',
     margin: '0 0 2% 0',
+    fontSize: 28,
+    '@media (max-width: 775px)': {
+      fontSize: 24
+    },
   },
 
   addonList: {

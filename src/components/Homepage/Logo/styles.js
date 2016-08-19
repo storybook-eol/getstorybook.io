@@ -8,8 +8,28 @@ export default {
     textAlign: 'center',
     fontWeight: 'bold',
     letterSpacing: 2,
-    maxWidth: 570,
     fontFamily: 'Arial',
+    width: 570,
+    fontSize: 70,
+    '@media (max-width: 780px)': {
+      width: 'auto',
+    },
+    '@media (max-width: 600px)': {
+      width: 'auto',
+      fontSize: 55
+    },
+    '@media (max-width: 500px)': {
+      width: 'auto',
+      fontSize: 45
+    },
+    '@media (max-width: 415px)': {
+      width: 'auto',
+      fontSize: 35
+    },
+    '@media (max-width: 376px)': {
+      width: 'auto',
+      fontSize: 25
+    },
   },
 
   span: {

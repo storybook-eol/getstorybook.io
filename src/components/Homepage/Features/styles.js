@@ -12,13 +12,21 @@ const styles = {
 
   heading: {
     letterSpacing: '2px',
-    margin: '0 0 5% 0'
+    margin: '0 0 5% 0',
+    fontSize: 28,
+    '@media (max-width: 500px)': {
+      fontSize: 24
+    },
   },
 
   ul: {
     listStyle: 'none',
     margin: 0,
     padding: 0,
+    fontSize: 20,
+    '@media (max-width: 500px)': {
+      fontSize: 16
+    },
   },
 
   li: {

@@ -7,6 +7,10 @@ export default {
     borderTop: '1px solid #EEE',
     borderBottom: '1px solid #EEE',
     padding: '6% 6% 0',
+    fontSize: 20,
+    '@media (max-width: 775px)': {
+      fontSize: 16
+    },
   },
 
   link: {
