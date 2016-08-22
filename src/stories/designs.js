@@ -78,5 +78,47 @@ export default {
     note: `
       Use the logos in the "src/design/homepage" directory.
     `
-  }
+  },
+
+  "Docs.page": {
+    design: require('../design/docs/docs.png'),
+  },
+
+  "Docs.header": {
+    design: require('../design/docs/header.png'),
+    note: `
+      For the logo, use the the logo component used in the homepage.
+      But use a use CSS zoom property to scale it down.
+      May be you can use CSS transform too.
+    `
+  },
+
+  "Docs.docs-header": {
+    design: require('../design/docs/docs-header.png'),
+    note: `
+      Here this is something fixed for now. Don't add Vue or Angular2 links.
+      For the ReactNative, just like our React Native Storybook repo.
+    `
+  },
+
+  "Docs.navigation": {
+    design: require('../design/docs/navigation.png'),
+    note: `
+      This is the basic navigation menu which is similar to BulletProofMeteor.
+      Get titles and links from the outside and render this navigation.
+      Also get the selectedItem to show it differently.
+    `
+  },
+
+  "Docs.content": {
+    design: require('../design/docs/content.png'),
+    note: `
+      This is the content area. Use https://github.com/rexxars/react-markdown
+      to render markdown.
+      For the markdown content use CSS to style it as in this project we support it.
+
+      Beside markdown, get the title from the outside.
+      (That's same as the selectedItem in the navigation).
+    `
+  },
 };

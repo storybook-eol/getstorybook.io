@@ -2,7 +2,6 @@ import React from 'react';
 import { Flex, Box } from 'reflexbox';
 import radium, { StyleRoot } from 'radium';
 import styles from './styles';
-import Logo from '../Logo';
 import Container from '../Container';
 
 class Footer extends React.Component {

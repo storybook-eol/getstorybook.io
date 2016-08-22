@@ -44,6 +44,29 @@ export default class WithDesign extends React.Component {
     this.calculateScale = this.calculateScale.bind(this);
   }
 
+  tryCalculateScale() {
+    const calculate = () => {
+      // Sometimes, this code may after this instance is unmounted.
+      // Specially when navigating between stories quickly.
+      // So, we need to handle it.
+      if (this.unmounted) return;
+      this.calculateScale();
+    };
+
+    // This is some bad code where we are trying to do the scale based on
+    // some data from the actutal DOM.
+    // We don't have way(or I don't know how) to determine when to detect DOM
+    // complete it's rendering.
+    // So, to do that, we need to run this logic in muliple times.
+    // It's ugly. But safe and working.
+    calculate();
+    setTimeout(calculate, 0);
+    setTimeout(calculate, 50);
+    setTimeout(calculate, 100);
+    setTimeout(calculate, 200);
+    setTimeout(calculate, 500);
+  }
+
   calculateScale() {
     const designImage = this.refs.design;
     if (!designImage) {
@@ -57,11 +80,12 @@ export default class WithDesign extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.calculateScale);
-    this.calculateScale();
+    this.tryCalculateScale();
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.calculateScale);
+    this.unmounted = true;
   }
 
   renderToolbar() {
@@ -71,11 +95,7 @@ export default class WithDesign extends React.Component {
       return () => {
         localStorage.setItem('WITH_DESIGN_TYPE', type);
         this.setState({ type });
-
-        // We need to update
-        setTimeout(() => {
-          this.calculateScale();
-        }, 50);
+        this.tryCalculateScale();
       };
     };
 

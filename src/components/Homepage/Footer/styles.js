@@ -1,5 +1,3 @@
-import theme from '../../theme';
-
 export default {
   container: {
     textAlign: 'center',

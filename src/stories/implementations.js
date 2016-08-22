@@ -1,5 +1,4 @@
 import React from 'react';
-import Homepage from '../components/Homepage';
 import Header from '../components/Homepage/Header';
 import Logo from '../components/Homepage/Logo';
 import Heading from '../components/Homepage/Heading';
@@ -11,6 +10,14 @@ import Addon from '../components/Homepage/Addon';
 import AddonList from '../components/Homepage/AddonList';
 import Demo from '../components/Homepage/Demo';
 import Footer from '../components/Homepage/Footer';
+import Homepage from '../components/Homepage';
+
+import DocsHeader from '../components/Docs/DocsHeader';
+import Navigation from '../components/Docs/Navigation';
+import Content from '../components/Docs/Content';
+import Docs from '../components/Docs';
+
+import { docsData } from './data';
 
 export default {
   'Homepage.page': (
@@ -57,5 +64,32 @@ export default {
   ),
   'Homepage.footer': (
     <Footer/>
+  ),
+
+  'Docs.page': (
+    <Docs
+      sections={docsData.sections}
+      selectedItem={docsData.selectedItem}
+    />
+  ),
+
+  'Docs.header': (
+    <Header />
+  ),
+  'Docs.docs-header': (
+    <DocsHeader />
+  ),
+  'Docs.navigation': (
+    <Navigation
+      sections={docsData.sections}
+      selectedSection={docsData.selectedItem.sectionId}
+      selectedItem={docsData.selectedItem.id}
+    />
+  ),
+  'Docs.content': (
+    <Content
+      title={docsData.selectedItem.title}
+      content={docsData.selectedItem.content}
+    />
   ),
 };

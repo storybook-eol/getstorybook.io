@@ -1,5 +1,3 @@
-import theme from '../../theme';
-
 const styles = {
   container: {
     textAlign: 'center',

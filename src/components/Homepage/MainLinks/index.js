@@ -1,25 +1,49 @@
 import React, { Component, PropTypes } from 'react';
 import radium, { StyleRoot } from 'radium';
-import styles from './styles';
 import { Flex, Box } from 'reflexbox';
+import { Link } from 'react-router';
 import Container from '../Container';
+import styles from './styles';
 
-export const Link = ({ icon, caption, href }) => (
-  <div style={styles.link}>
-    <a style={styles.a} href={href}>
-      <img style={styles.icon} src={icon}/>
-      <br/>
-      { caption }
-    </a>
-  </div>
-);
 
-Link.propTypes = {
+class ATag extends Component {
+  renderLocalLink() {
+    const { icon, caption, href } = this.props;
+    return (
+      <Link style={styles.a} to={href}>
+        <img style={styles.icon} src={icon} role="presentation"/>
+        <br/>
+        { caption }
+      </Link>
+    );
+  }
+
+  renderOutsideLink() {
+    const { icon, caption, href } = this.props;
+    return (
+      <a style={styles.a} href={href}>
+        <img style={styles.icon} src={icon} role="presentation"/>
+        <br/>
+        { caption }
+      </a>
+    );
+  }
+
+  render() {
+    const { href } = this.props;
+    return (
+      <div style={styles.link}>
+        {/^http/.test(href)? this.renderOutsideLink() : this.renderLocalLink()}
+      </div>
+    );
+  }
+}
+
+ATag.propTypes = {
   link: React.PropTypes.string,
   caption: React.PropTypes.string,
   href: React.PropTypes.string,
 };
-
 
 class MainLinks extends Component {
   constructor() {
@@ -69,7 +93,7 @@ class MainLinks extends Component {
                 auto
                 style={styles.box}
               >
-                <Link
+                <ATag
                   icon={require('../../../design/homepage/slack-icon.png')}
                   caption="Join Us on Slack"
                   href="https://storybooks-slackin.herokuapp.com/"
@@ -79,7 +103,7 @@ class MainLinks extends Component {
                 auto
                 style={styles.box}
               >
-                <Link
+                <ATag
                   icon={require('../../../design/homepage/docs-icon.png')}
                   caption="Read Docs"
                   href="/docs"
@@ -89,7 +113,7 @@ class MainLinks extends Component {
                 auto
                 style={styles.box}
               >
-                <Link
+                <ATag
                   icon={require('../../../design/homepage/mail-icon.png')}
                   caption="Get Newsletter"
                   href="https://tinyletter.com/storybooks"

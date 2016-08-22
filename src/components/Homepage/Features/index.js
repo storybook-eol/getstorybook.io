@@ -1,7 +1,6 @@
 import React from 'react';
 import radium, { StyleRoot } from 'radium';
 import styles from './styles';
-import Container from '../Container';
 
 const LI = ({children}) => (
   <li style={styles.li}>{children}</li>
