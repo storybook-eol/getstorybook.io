@@ -5,7 +5,8 @@ const styles = {
     ...theme.base,
     ...theme.text,
     margin: 0,
-    padding: 0,
+    padding: '0 0 0 4%',
+    width: '100%',
   },
 
   h2: {

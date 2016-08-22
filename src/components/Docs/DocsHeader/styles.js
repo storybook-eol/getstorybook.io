@@ -10,6 +10,12 @@ export default {
     fontSize: 35,
     margin: "0 0 5px 0",
     padding: 0,
+    '@media (max-width: 670px)': {
+      fontSize: 30,
+    },
+    '@media (max-width: 570px)': {
+      fontSize: 25,
+    },
   },
 
   links: {

@@ -2,10 +2,29 @@ import theme from '../../theme';
 
 const styles = {
   container: {
-    ...theme.base,
-    ...theme.text,
-    borderRight: '1px solid #ECECEC',
-    marginRight: 30,
+    sidebarNav: {
+      ...theme.base,
+      ...theme.text,
+      borderRight: '1px solid #ECECEC',
+      marginRight: 30,
+      marginLeft: '35%',
+      width: '100%',
+      display: 'block',
+      '@media (max-width: 570px)': {
+        display: 'none',
+      },
+    },
+    dropdownNav: {
+      ...theme.base,
+      ...theme.text,
+      width: '100%',
+      marginRight: 30,
+      marginLeft: '35%',
+      display: 'none',
+      '@media (max-width: 570px)': {
+        display: 'block',
+      },
+    },
   },
 
   h3: {
@@ -26,6 +45,11 @@ const styles = {
     ...theme.text,
     textDecoration: 'none',
   },
+
+  dropdown: {
+    width: '100%',
+    marginBottom: '5px',
+  }
 };
 
 styles.selectedItem = {
