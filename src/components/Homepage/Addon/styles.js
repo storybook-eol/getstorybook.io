@@ -17,9 +17,9 @@ export default {
     letterSpacing: 1,
     textAlign: 'center',
     margin: '0 0 4% 0',
-    fontSize: 20,
+    fontSize: 18,
     '@media (max-width: 775px)': {
-      fontSize: 18
+      fontSize: 16
     },
   },
 
@@ -27,18 +27,18 @@ export default {
     ...theme.text,
     lineHeight: '25px',
     margin: '40px 0 0 0',
-    fontSize: 18,
+    fontSize: 16,
     '@media (max-width: 775px)': {
-      fontSize: 16
+      fontSize: 14
     },
   },
 
   link: {
     color: '#565AFF',
     textDecoration: 'none',
-    fontSize: 18,
+    fontSize: 16,
     '@media (max-width: 775px)': {
-      fontSize: 16
+      fontSize: 14
     },
   },
 
