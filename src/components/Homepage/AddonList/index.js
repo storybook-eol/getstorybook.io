@@ -54,8 +54,10 @@ class AddonList extends React.Component {
               This is just a few addons we've have.
             </div>
             <div style={styles.links}>
-              <a href='/' style={styles.link}>Explore More</a>
-              <a href='/' style={styles.link}>Write Your Own</a>
+              <ul style={styles.linkUl}>
+                <li style={styles.linkLi}><a href='/' style={styles.link}>Explore More</a></li>
+                <li style={styles.linkLi}><a href='/' style={styles.link}>Write Your Own</a></li>
+              </ul>
             </div>
           </div>
         </StyleRoot>

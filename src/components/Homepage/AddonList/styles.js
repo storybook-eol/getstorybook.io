@@ -28,6 +28,22 @@ const styles = {
 
   links: {
     margin: '1% 0 0 0',
+    clear: 'both',
+  },
+
+  linkUl: {
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+  },
+
+  linkLi: {
+    display: 'inline',
+    padding: 0,
+    '@media (max-width: 775px)': {
+      display: 'inherit',
+      paddingBottom: '3px',
+    },
   },
 
   link: {
