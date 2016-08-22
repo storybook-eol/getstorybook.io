@@ -4,7 +4,7 @@ export default {
   container: {
     ...theme.base,
     maxWidth: 800,
-    margin: '6% auto',
+    margin: '3% auto',
   },
 
   box: {
