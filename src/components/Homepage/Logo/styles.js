@@ -1,16 +1,46 @@
 import styles from '../../theme';
 
 export default {
+  containerSmall: {
+    ...styles.base,
+    border: '2px dashed #00BCD4',
+    padding: '2% 5% 2% 5%',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontFamily: 'Arial',
+    width: 110,
+    fontSize: 15,
+  },
+
   container: {
     ...styles.base,
     border: '3px dashed #00BCD4',
-    padding: '25px 0',
-    fontSize: 70,
+    padding: '2% 5% 2% 5%',
     textAlign: 'center',
     fontWeight: 'bold',
     letterSpacing: 2,
-    width: 570,
     fontFamily: 'Arial',
+    width: 570,
+    fontSize: 70,
+    '@media (max-width: 780px)': {
+      width: 'auto',
+    },
+    '@media (max-width: 600px)': {
+      width: 'auto',
+      fontSize: 55
+    },
+    '@media (max-width: 500px)': {
+      width: 'auto',
+      fontSize: 45
+    },
+    '@media (max-width: 415px)': {
+      width: 'auto',
+      fontSize: 35
+    },
+    '@media (max-width: 376px)': {
+      width: 'auto',
+      fontSize: 25
+    },
   },
 
   span: {

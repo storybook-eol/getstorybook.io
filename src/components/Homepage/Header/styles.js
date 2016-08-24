@@ -11,7 +11,11 @@ const styles = {
 
   container: {
     textAlign: 'right',
-    padding: "60px 0",
+    padding: '29% 0',
+  },
+
+  box: {
+    marginLeft: '-60px',
   },
 };
 

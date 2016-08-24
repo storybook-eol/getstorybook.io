@@ -9,7 +9,9 @@ const Content = ({title, content}) => (
     <Box>
       <div style={ styles.container }>
         <h2 style={ styles.h2 }>{ title }</h2>
-        <ReactMarkdown source={content} />
+        <div>
+          <ReactMarkdown source={content} />
+        </div>
       </div>
     </Box>
   </Flex>

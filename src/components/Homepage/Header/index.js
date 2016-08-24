@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from './styles';
-import Container from '../Container';
+import { Flex, Box } from 'reflexbox';
 import { Link } from 'react-router';
-
+import Container from '../Container';
+import Logo from '../Logo';
+import styles from './styles';
 
 const sections = [
   { id: 'home', caption: 'Home', href: '/' },
@@ -27,12 +28,30 @@ class Header extends React.Component {
   }
 
   render() {
+    const { currentSection } = this.props;
+
     return (
       <Container>
-        <div style={styles.container}>
-          {this.renderSections()}
-          <a style={styles.link} target="_blank" href='https://storybooks.io'>Storybooks.io</a>
-        </div>
+        <Flex
+          align="center"
+          justify="space-between"
+        >
+          <Box style={ styles.box } p={3}>
+            <div style={styles.container}>
+              {
+                (currentSection === 'docs') ?
+                <Logo small /> :
+                ''
+              }
+            </div>
+          </Box>
+          <Box p={3}>
+            <div style={styles.container}>
+              {this.renderSections()}
+              <a style={styles.link} target="_blank" href='https://storybooks.io'>Storybooks.io</a>
+            </div>
+          </Box>
+        </Flex>
       </Container>
     );
   }
