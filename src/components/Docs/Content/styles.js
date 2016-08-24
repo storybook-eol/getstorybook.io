@@ -15,6 +15,10 @@ const styles = {
     marginBottom: '30px',
     lineHeight: '28px',
   },
+
+  content: {
+    width: '95%',
+  },
 };
 
 export default styles;

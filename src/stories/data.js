@@ -24,11 +24,9 @@ export const docsData = {
     section: 'basics',
     title: 'Writing Stories',
     content: `
-You need to write stories to show your components inside React Storybook.<br/>
-We've a set of APIs allows you to write stories and do more with them.
+You need to write stories to show your components inside React Storybook. We've a set of APIs allows you to write stories and do more with them.
 
-When you are writing stories, you can follow these guidelines<br/>
-to write great stories.
+When you are writing stories, you can follow these guidelines to write great stories.
 
 * Write UI components by passing data via props.
 * In this way, you can isolate UI components easilly.
