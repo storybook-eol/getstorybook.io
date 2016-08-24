@@ -36,7 +36,7 @@ class Header extends React.Component {
           align="center"
           justify="space-between"
         >
-          <Box style={ styles.box } p={3}>
+          <Box>
             <div style={styles.container}>
               {
                 (currentSection === 'docs') ?

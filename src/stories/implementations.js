@@ -77,7 +77,7 @@ export default {
     <Header />
   ),
   'Docs.docs-header': (
-    <DocsHeader />
+    <DocsHeader currentSection="docs" />
   ),
   'Docs.navigation': (
     <Navigation

@@ -6,6 +6,23 @@ import Navigation from './Navigation';
 import Content from './Content';
 import Container from './Container';
 import { Flex, Box } from 'reflexbox';
+import radium, { StyleRoot } from 'radium';
+
+const styles = {
+  defaultNav: {
+    display: 'block',
+    '@media (max-width: 1000px)': {
+      display: 'none', 
+    },
+  },
+
+  dropdownNav: {
+    display: 'none',
+    '@media (max-width: 1000px)': {
+      display: 'block', 
+    },
+  }
+};
 
 class Docs extends React.Component {
   render() {
@@ -13,29 +30,41 @@ class Docs extends React.Component {
 
     return (
       <div>
-        <Helmet
-          htmlAttributes={{"lang": "en", "amp": undefined}}
-          title="Documentation | React Storybook"
-        />
-        <Header currentSection="docs"/>
-        <DocsHeader />
-        <Container>
-        <Flex>
-          <Box col={3}>
-            <Navigation
-              sections={sections}
-              selectedSection={selectedSectionId}
-              selectedItem={selectedItemId}
-            />
-          </Box>
-          <Box>
-            <Content {...selectedItem}/>
-          </Box>
-        </Flex>
-        </Container>
+        <StyleRoot>
+          <Helmet
+            htmlAttributes={{"lang": "en", "amp": undefined}}
+            title="Documentation | React Storybook"
+          />
+          <Header currentSection="docs"/>
+          <DocsHeader />
+          <Container>
+            <Flex>
+              <Box>
+                <div style={ styles.defaultNav }>
+                  <Navigation
+                    sections={sections}
+                    selectedSection={selectedSectionId}
+                    selectedItem={selectedItemId}
+                  />
+                </div>
+              </Box>
+              <Box>
+                <div style={ styles.dropdownNav }>
+                  <Navigation
+                    sections={sections}
+                    selectedSection={selectedSectionId}
+                    selectedItem={selectedItemId}
+                    dropdown
+                  />
+                </div>
+                <Content {...selectedItem}/>
+              </Box>
+            </Flex>
+          </Container>
+        </StyleRoot>
       </div>
     );
   }
 }
 
-export default Docs;
+export default radium(Docs);

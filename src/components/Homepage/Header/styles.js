@@ -13,10 +13,6 @@ const styles = {
     textAlign: 'right',
     padding: '29% 0',
   },
-
-  box: {
-    marginLeft: '-60px',
-  },
 };
 
 styles.currentLink = {

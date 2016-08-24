@@ -7,23 +7,12 @@ const styles = {
       ...theme.text,
       borderRight: '1px solid #ECECEC',
       marginRight: 30,
-      marginLeft: '35%',
       width: '100%',
-      display: 'block',
-      '@media (max-width: 570px)': {
-        display: 'none',
-      },
     },
     dropdownNav: {
       ...theme.base,
       ...theme.text,
       width: '100%',
-      marginRight: 30,
-      marginLeft: '35%',
-      display: 'none',
-      '@media (max-width: 570px)': {
-        display: 'block',
-      },
     },
   },
 
@@ -58,3 +47,29 @@ styles.selectedItem = {
 };
 
 export default styles;
+
+  // container: {
+  //   sidebarNav: {
+  //     ...theme.base,
+  //     ...theme.text,
+  //     borderRight: '1px solid #ECECEC',
+  //     marginRight: 30,
+  //     marginLeft: '35%',
+  //     width: '100%',
+  //     display: 'block',
+  //     '@media (max-width: 570px)': {
+  //       display: 'none',
+  //     },
+  //   },
+  //   dropdownNav: {
+  //     ...theme.base,
+  //     ...theme.text,
+  //     width: '100%',
+  //     marginRight: 30,
+  //     marginLeft: '35%',
+  //     display: 'none',
+  //     '@media (max-width: 570px)': {
+  //       display: 'block',
+  //     },
+  //   },
+  // },

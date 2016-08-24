@@ -73,7 +73,7 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const { sections, selectedSection } = this.props;
+    const { sections, selectedSection, dropdown } = this.props;
     const { selectedSectionId } = this.state;
 
     const selectedSectionData = sections.find(section => {
@@ -81,24 +81,30 @@ class Navigation extends React.Component {
     });
     const navs = selectedSectionData.items;
 
+    if (dropdown) {
+      return (
+        <StyleRoot>
+          <div style={ styles.container.dropdownNav }>
+            <div>
+              <select style={ styles.dropdown } onChange={this.handleHeadingChange.bind(this)}>
+                {sections.map(this.renderHeadingOpts.bind(this))}
+              </select>
+            </div>
+
+            <div>
+              <select style={ styles.dropdown }>
+                {navs.map(this.renderNavOpts)}
+              </select>
+            </div>
+          </div>
+        </StyleRoot>
+      );
+    }
+
     return (
       <Flex>
         <StyleRoot>
-          <Box>
-            <div style={ styles.container.dropdownNav }>
-              <div>
-                <select style={ styles.dropdown } onChange={this.handleHeadingChange.bind(this)}>
-                  {sections.map(this.renderHeadingOpts.bind(this))}
-                </select>
-              </div>
-
-              <div>
-                <select style={ styles.dropdown }>
-                  {navs.map(this.renderNavOpts)}
-                </select>
-              </div>
-            </div>
-          
+          <Box>          
             <div style={ styles.container.sidebarNav }>
               {sections.map((section) => (
                 <div key={section.heading}>
