@@ -23,7 +23,7 @@ const styles = {
   },
 
   addonList: {
-    margin: '2% 0',
+    margin: '2% auto',
   },
 
   links: {

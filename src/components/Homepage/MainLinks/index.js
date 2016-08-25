@@ -60,7 +60,7 @@ class MainLinks extends Component {
       col: false,
     };
 
-    if (width < 680) {
+    if (width < 775) {
       stateObj.col = true;
     }
     

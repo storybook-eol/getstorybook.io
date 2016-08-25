@@ -8,7 +8,7 @@ export default {
     borderBottom: '1px solid #EEE',
     padding: '6% 6% 0',
     fontSize: 20,
-    '@media (max-width: 775px)': {
+    '@media (max-width: 890px)': {
       fontSize: 16
     },
   },

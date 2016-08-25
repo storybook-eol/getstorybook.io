@@ -18,7 +18,7 @@ class Addon extends Component {
       col: false,
     };
 
-    if (width < 775) {
+    if (width < 890) {
       stateObj.col = true;
     }
 
@@ -45,12 +45,13 @@ class Addon extends Component {
     };
 
     return(
-      <Flex>
+      <Flex
+        align="center"
+        justify="center"
+      >
         <StyleRoot>
           <div style={styles.container}>
             <Flex
-              align="center"
-              justify="center"
               column={col}
             >
               <Box col={colCount}>

@@ -3,7 +3,7 @@ import theme from '../../theme';
 export default {
   container: {
     ...theme.base,
-    maxWidth: 800,
+    maxWidth: '800px',
     margin: '3% auto',
   },
 
@@ -18,7 +18,7 @@ export default {
     textAlign: 'center',
     margin: '0 0 4% 0',
     fontSize: 18,
-    '@media (max-width: 775px)': {
+    '@media (max-width: 890px)': {
       fontSize: 16
     },
   },
@@ -28,7 +28,7 @@ export default {
     lineHeight: '25px',
     margin: '40px 0 0 0',
     fontSize: 16,
-    '@media (max-width: 775px)': {
+    '@media (max-width: 890px)': {
       fontSize: 14
     },
   },
@@ -37,7 +37,7 @@ export default {
     color: '#565AFF',
     textDecoration: 'none',
     fontSize: 16,
-    '@media (max-width: 775px)': {
+    '@media (max-width: 890px)': {
       fontSize: 14
     },
   },
@@ -45,6 +45,6 @@ export default {
   content: {},
 
   image: {
-    width: '100%',
+    width: '370px',
   }
 };
