@@ -1,7 +1,11 @@
 const styles = {
   container: {
     textAlign: 'center',
-    padding: 25,
+    padding: '3%',
+  },
+
+  img: {
+    width: '92%',
   },
 };
 

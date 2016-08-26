@@ -1,7 +1,7 @@
 export default {
   container: {
     textAlign: 'center',
-    marginTop: 40,
+    marginTop: '6%',
     borderTop: '1px solid #EEE',
     padding: 40,
   },

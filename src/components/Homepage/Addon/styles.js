@@ -3,37 +3,48 @@ import theme from '../../theme';
 export default {
   container: {
     ...theme.base,
-    width: 800,
-    margin: '60px auto',
+    maxWidth: '800px',
+    margin: '3% auto',
   },
 
   box: {
-    padding: "0 20px",
+    padding: '0 3%',
   },
 
   heading: {
     ...theme.text,
     textTransform: 'uppercase',
-    fontSize: 20,
     letterSpacing: 1,
     textAlign: 'center',
-    margin: '0 0 20px 0',
+    margin: '0 0 4% 0',
+    fontSize: 18,
+    '@media (max-width: 890px)': {
+      fontSize: 16
+    },
   },
 
   description: {
     ...theme.text,
-    fontSize: 18,
     lineHeight: '25px',
     margin: '40px 0 0 0',
+    fontSize: 16,
+    '@media (max-width: 890px)': {
+      fontSize: 14
+    },
   },
 
   link: {
     color: '#565AFF',
-    fontSize: 18,
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontSize: 16,
+    '@media (max-width: 890px)': {
+      fontSize: 14
+    },
   },
 
-  content: {
-    textAlign: 'left',
+  content: {},
+
+  image: {
+    width: '370px',
   }
 };

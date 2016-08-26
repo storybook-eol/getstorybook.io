@@ -1,11 +1,12 @@
-import React from 'react';
-import styles from './styles';
+import React, { Component, PropTypes } from 'react';
+import radium, { StyleRoot } from 'radium';
 import { Flex, Box } from 'reflexbox';
-import Container from '../Container';
 import { Link } from 'react-router';
+import Container from '../Container';
+import styles from './styles';
 
 
-class ATag extends React.Component {
+class ATag extends Component {
   renderLocalLink() {
     const { icon, caption, href } = this.props;
     return (
@@ -44,34 +45,86 @@ ATag.propTypes = {
   href: React.PropTypes.string,
 };
 
-const MainLinks = () => (
-  <Container>
-    <div style={styles.container}>
-      <Flex>
-        <Box>
-          <ATag
-            icon={require('../../../design/homepage/slack-icon.png')}
-            caption="Join Us on Slack"
-            href="https://storybooks-slackin.herokuapp.com/"
-          />
-        </Box>
-        <Box>
-          <ATag
-            icon={require('../../../design/homepage/docs-icon.png')}
-            caption="Read Docs"
-            href="/docs"
-          />
-        </Box>
-        <Box>
-          <ATag
-            icon={require('../../../design/homepage/mail-icon.png')}
-            caption="Get Newsletter"
-            href="https://tinyletter.com/storybooks"
-          />
-        </Box>
-      </Flex>
-    </div>
-  </Container>
-);
+class MainLinks extends Component {
+  constructor() {
+    super();
 
-export default MainLinks;
+    this.state = {
+      col: false,
+    };
+  }
+
+  handleResize() {
+    const width = window.innerWidth;
+    const stateObj = {
+      col: false,
+    };
+
+    if (width < 775) {
+      stateObj.col = true;
+    }
+    
+    this.setState(stateObj);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      col: false,
+    });
+  }
+
+  render() {
+    const { col } = this.state;
+
+    return (
+      <Container>
+        <StyleRoot>
+          <div style={styles.container}>
+            <Flex
+              align="center"
+              justify="center"
+              column={col}
+            >
+              <Box
+                auto
+                style={styles.box}
+              >
+                <ATag
+                  icon={require('../../../design/homepage/slack-icon.png')}
+                  caption="Join Us on Slack"
+                  href="https://storybooks-slackin.herokuapp.com/"
+                />
+              </Box>
+              <Box
+                auto
+                style={styles.box}
+              >
+                <ATag
+                  icon={require('../../../design/homepage/docs-icon.png')}
+                  caption="Read Docs"
+                  href="/docs"
+                />
+              </Box>
+              <Box
+                auto
+                style={styles.box}
+              >
+                <ATag
+                  icon={require('../../../design/homepage/mail-icon.png')}
+                  caption="Get Newsletter"
+                  href="https://tinyletter.com/storybooks"
+                />
+              </Box>
+            </Flex>
+          </div>
+        </StyleRoot>
+      </Container>    
+    );   
+  }
+}
+
+export default radium(MainLinks);

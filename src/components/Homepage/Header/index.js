@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './styles';
-import Container from '../Container';
+import { Flex, Box } from 'reflexbox';
 import { Link } from 'react-router';
-
+import Container from '../Container';
+import styles from './styles';
 
 const sections = [
   { id: 'home', caption: 'Home', href: '/' },
@@ -29,10 +29,16 @@ class Header extends React.Component {
   render() {
     return (
       <Container>
-        <div style={styles.container}>
-          {this.renderSections()}
-          <a style={styles.link} target="_blank" href='https://storybooks.io'>Storybooks.io</a>
-        </div>
+        <Flex
+          justify="flex-end"
+        >
+          <Box>
+            <div style={styles.container}>
+              {this.renderSections()}
+              <a style={styles.link} target="_blank" href='https://storybooks.io'>Storybooks.io</a>
+            </div>
+          </Box>
+        </Flex>
       </Container>
     );
   }
