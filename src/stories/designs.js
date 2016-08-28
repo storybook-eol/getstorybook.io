@@ -21,6 +21,7 @@ export default {
     design: require('../design/homepage/heading.png'),
     note: `
       Use the "Storybook" font to make it super bold. (font-weight=800)
+      In the mobile view, try to make the font-size smaller.
     `
   },
 };
