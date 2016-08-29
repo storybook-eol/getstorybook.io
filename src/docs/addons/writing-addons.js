@@ -10,7 +10,7 @@ export default {
   id: "writing-addons",
   title: "Writing Addons",
   content: stripIndent`
-    This is complete guide on how to create addons for Storybook.
+    This is a complete guide on how to create addons for Storybook.
 
     ## Storybook Basics
 
@@ -70,7 +70,7 @@ export default {
 
     ![Without notes](${images.storiesWithNotes})
 
-    ## SETUP
+    ## Setup
 
     First, create an \`addons.js\` inside the Storybook config directory and add the following content to it.
 
@@ -104,7 +104,7 @@ export default {
     }
     ~~~
 
-    In this case, our component can access something called the channel. It lets us communicate with the panel (where we display notes). It has a NodeJS EventEmitter compatible API.
+    In this case, our component can access something called the channel. It lets us communicate with the panel (where we display notes). It has a NodeJS [EventEmitter](https://nodejs.org/api/events.html) compatible API.
 
     In the above case, it will emit the notes text to the channel, so our panel can listen to it.
 

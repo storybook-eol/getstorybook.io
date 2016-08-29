@@ -59,7 +59,7 @@ export default {
 
     ### JSON Loader
 
-    You can import “. json” files, as you do with Node.js. This will also allow you to use NPM projects, which imports .json files inside them.
+    You can import \`.json\` files, as you do with Node.js. This will also allow you to use NPM projects, which imports \`.json\` files inside them.
 
     ## NPM Modules
 

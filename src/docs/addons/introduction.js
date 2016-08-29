@@ -104,8 +104,8 @@ export default {
 
     See the following links to learn more about native addons:
 
-    * [Using addons](#)
-    * [Available addons](#)
-    * [Write your own addon](#)
+    * [Using addons](/docs/addons/using-addons)
+    * [Addon Galary](/docs/addons/addon-galary)
+    * [Write your own addon](/docs/addons/writing-addons)
   `
 };
