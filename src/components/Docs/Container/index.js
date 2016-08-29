@@ -9,6 +9,21 @@ const Container = () => (
       <Nav />
     </div>
     <div className="content col-xs-12 col-md-10">
+      <div className="nav-dropdown">
+        <div>
+          <select>
+            <option>Basic</option>
+            <option>Config</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>intro</option>
+            <option>content</option>
+          </select>
+        </div>
+      </div>
+
       <Content />
     </div>
   </div>
