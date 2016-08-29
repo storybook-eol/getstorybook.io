@@ -4,7 +4,8 @@ const data = {
       id: 'basics',
       heading: 'Basics',
       items: [
-        require('./basics/getting_started').default,
+        require('./basics/introduction').default,
+        require('./basics/quick-start-guide').default,
         require('./basics/slow_start').default,
       ]
     },

@@ -2,6 +2,7 @@ import React from 'react';
 import Highlight from 'react-highlight';
 import styles from './styles';
 import 'highlight.js/styles/atom-one-light.css';
+import './styles.css';
 
 import marked from 'marked';
 marked.setOptions({
@@ -16,7 +17,7 @@ marked.setOptions({
 });
 
 const Content = ({title, content}) => (
-  <div style={ styles.container }>
+  <div style={ styles.container } className="docs-content">
     <h2 style={ styles.h2 }>{ title }</h2>
     <Highlight innerHTML={true}>
       {marked(content)}
