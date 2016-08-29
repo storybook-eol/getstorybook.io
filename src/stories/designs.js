@@ -111,4 +111,51 @@ export default {
       * Medium: https://voice.kadira.io
     `
   },
+
+  "Docs.page": {
+    design: require('../design/docs/docs.png'),
+    note: `
+      Here we use the docs layout which is similar to BulletProof Meteor.
+      We've used Arial for some texts. I'll mention them. Otherwise still the
+      fonts are Open Sans.
+
+      Here we reuse the header and footer from the Homepage.
+      Bootstrap Layout is also pretty similar to the Homepage.
+    `
+  },
+
+  "Docs.docs-container": {
+    design: require('../design/docs/docs-container.png'),
+    note: `
+      This is a container and this as no content.
+      But this one has top and bottom borders and some margins.
+    `
+  },
+
+  "Docs.docs-nav": {
+    design: require('../design/docs/docs-nav.png'),
+    note: `
+      This is docs navigation and accept some dataset to render this.
+      Here's some sample data: https://gist.github.com/arunoda/04fd23e93766eb883afcac93f06fbff7
+
+      Here topic Titles are on Open Sans with 20px and bold texts with color #444.
+      Others are with '"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif"' and 17px.
+      Selected item is marked with bold and in this color: #E25E5E.
+
+    `
+  },
+
+  "Docs.docs-content": {
+    design: require('../design/docs/docs-content.png'),
+    note: `
+      This title is with Open Sans 30px font. color #444.
+      Content is with following style:
+       * font: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif.
+       * size: 17px,
+       * line-height: 25px
+       * color: #333
+
+    (You can look at the BulletProof Meteor for the actual styles.)
+    `
+  },
 };
