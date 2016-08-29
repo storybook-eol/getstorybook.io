@@ -1,0 +1,17 @@
+#docs-content .content {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #333;
+  margin: 40px 20px;
+  padding: 0 30px;
+  border-left: 1px solid #ccc;
+}
+
+#docs-content h2 {
+  font-family: "Open Sans";
+  font-size: 30px;
+  color: #444;
+  font-weight: 700;
+  margin: 0 0 20px;
+}

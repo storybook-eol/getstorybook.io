@@ -1,0 +1,36 @@
+#nav {
+  color: #444;
+  margin: 0;
+  padding: 40px 0;
+}
+
+#nav .col-xs-12 {
+  margin: 0;
+  padding: 0;
+}
+
+#nav h3 {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 0;
+}
+
+#nav ul {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 17px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+#nav ul li {
+  margin: 15px 0;
+  padding: 0;
+}
+
+#nav ul li.selected {
+  color: #E25E5E;
+  font-weight: bold;
+}

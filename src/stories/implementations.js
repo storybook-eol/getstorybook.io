@@ -7,6 +7,10 @@ import Platforms from '../components/Homepage/Platforms';
 import MainLinks from '../components/Homepage/MainLinks';
 import Featured from '../components/Homepage/Featured';
 import Footer from '../components/Homepage/Footer';
+import Docs from '../components/Docs';
+import DocsContainer from '../components/Docs/Container';
+import DocsContent from '../components/Docs/Content';
+import DocsNav from '../components/Docs/Nav';
 
 export default {
   'Homepage.page': (
@@ -32,5 +36,17 @@ export default {
   ),
   'Homepage.footer': (
     <Footer />
+  ),
+  'Docs.page': (
+    <Docs />
+  ),
+  'Docs.docs-container': (
+    <DocsContainer />
+  ),
+  'Docs.docs-content': (
+    <DocsContent />
+  ),
+  'Docs.docs-nav': (
+    <DocsNav />
   ),
 };
