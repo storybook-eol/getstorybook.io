@@ -23,6 +23,17 @@ const data = {
         require('./configurations/cli-options').default,
       ]
     },
+    {
+      id: 'addons',
+      heading: 'Addons',
+      items: [
+        require('./addons/introduction').default,
+        require('./addons/using-addons').default,
+        require('./addons/addon-galary').default,
+        require('./addons/writing-addons').default,
+        require('./addons/api').default,
+      ]
+    },
   ],
 };
 
