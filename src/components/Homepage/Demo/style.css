@@ -1,0 +1,9 @@
+.demo-img {
+  width: 575px;
+}
+
+@media only screen and (max-width: 680px) {
+  .demo-img {
+    width: 100%;
+  } 
+}
