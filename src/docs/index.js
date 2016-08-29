@@ -6,7 +6,9 @@ const data = {
       items: [
         require('./basics/introduction').default,
         require('./basics/quick-start-guide').default,
-        require('./basics/slow_start').default,
+        require('./basics/slow-start-guide').default,
+        require('./basics/writing-stories').default,
+        require('./basics/exporting-storybook').default,
       ]
     },
     {
