@@ -1,8 +1,10 @@
 import React from 'react';
+import './style.css';
+import Header from './Header';
 
 const Homepage = () => (
-  <div>
-
+  <div className="container">
+    <Header />
   </div>
 );
 

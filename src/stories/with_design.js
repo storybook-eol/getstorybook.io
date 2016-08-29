@@ -5,6 +5,8 @@ const { localStorage } = window;
 const styles = {
   toolbar: {
     marginBottom: 10,
+    fontSize: 11,
+    fontFamily: '-apple-system, ".SFNSText-Regular", "San Francisco", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif',
   },
 
   toolbarButton: {

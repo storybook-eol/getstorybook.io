@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Homepage from './components/Homepage';
 import Docs from './containers/Docs';
 import { Router, Route, browserHistory } from 'react-router';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
 ReactDOM.render(

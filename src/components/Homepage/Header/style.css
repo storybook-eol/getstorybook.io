@@ -1,0 +1,12 @@
+#header {
+  margin: 50px 0;
+}
+
+#header-title {
+  font-weight: 800;
+}
+
+#header-links a {
+  padding-left: 10px;
+  text-transform: uppercase;
+}
