@@ -15,8 +15,12 @@ const data = {
       id: 'configurations',
       heading: 'Configurations',
       items: [
-        require('./configurations/default_config').default,
-        require('./configurations/webpack').default,
+        require('./configurations/default-config').default,
+        require('./configurations/custom-webpack-config').default,
+        require('./configurations/custom-babel-config').default,
+        require('./configurations/add-custom-head-tags').default,
+        require('./configurations/serving-static-files').default,
+        require('./configurations/cli-options').default,
       ]
     },
   ],
