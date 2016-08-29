@@ -16,7 +16,7 @@ export default {
 
     Storybook has its own Webpack setup and a dev server. Webpack setup is very similar to [Create React App](https://github.com/facebookincubator/create-react-app), but allows you to configure as you want.
 
-    In this guide, we are trying to set up Storybook for your React project. This guide will help you to configure Storybook with minimal setup, but also shows you how to extend the setup as needed.
+    In this guide, we are trying to set up Storybook for your React project.
 
     ## Add @kadira/storybook
 
@@ -40,7 +40,7 @@ export default {
 
     ## Create the config file
 
-    Storybook can be configured in several different ways. That’s why we've added a **-c** option to the above NPM script mentioning **.storybook** as the config directory.
+    Storybook can be configured in several different ways. That’s why we need a config directory. We've added a \`-c\` option to the above NPM script mentioning \`.storybook\` as the config directory.
 
     For the basic Storybook configuration file, you don't need to do much, but simply tell Storybook where to find stories.
 
@@ -95,6 +95,6 @@ export default {
 
     ![](${images.basicsStories})
 
-    Now you can change components and write stories whenever you need to. You'll get those changes into Storybook in a snap with the help of Webpack's HMR api.
+    Now you can change components and write stories whenever you need to. You'll get those changes into Storybook in a snap with the help of Webpack's HMR API.
   `
 };

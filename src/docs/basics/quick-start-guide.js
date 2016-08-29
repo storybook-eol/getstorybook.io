@@ -13,7 +13,7 @@ export default {
     getstorybook
     ~~~
 
-    This will configure your app for Storybook. You can run your Storybook with:
+    This will configure your app for Storybook. After that, you can run your Storybook with:
 
     ~~~
     npm run storybook
@@ -23,14 +23,14 @@ export default {
 
     ## What's happening under the hood
 
-    Our **getstorybook** tool simply configures Storybook for your React app or library. This is what happens when you run the getstorybook command:
+    This \`getstorybook\` tool simply configures Storybook for your React app or library. This is what happens when you run the getstorybook command:
 
-    * It will detect your project type and prepare a configuration (it supports any React app/library and Meteor).
+    * It will detect your project type and prepare a configuration (it supports any React app/library including Meteor).
     * It will add the necessary NPM modules into your app.
     * It will create a Storybook config directory and creates a default config file.
     * It will create a directory called \`stories\`, and you can write your stories inside that.
     * It will also add some NPM scripts, like \`npm run storybook\`.
 
-    Now you can start [writing stories](http://link-to-writing-stories/) for your project.
+    Now you can start [writing stories](/docs/basics/writing-stories) for your project.
   `
 };
