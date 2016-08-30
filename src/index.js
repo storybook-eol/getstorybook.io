@@ -5,6 +5,7 @@ import Docs from './containers/Docs';
 import { Router, Route, browserHistory } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
+import './lib/autolinker';
 
 ReactDOM.render(
   (
