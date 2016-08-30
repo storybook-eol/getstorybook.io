@@ -28,7 +28,9 @@ class Header extends React.Component {
     return (
       <div id="header" className="row">
         <div className="col-xs-12">
-          <div id="header-title" className="pull-left">STORYBOOK</div>
+          <div id="header-title" className="pull-left">
+            <a href="/">STORYBOOK</a>
+          </div>
           <div id="header-links" className="pull-right">
             { this.renderSections() }
             <a href="https://storybooks.io">Storybooks.io</a>
