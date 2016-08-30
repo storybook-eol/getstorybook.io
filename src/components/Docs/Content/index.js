@@ -1,30 +1,36 @@
 import React from 'react';
+import Highlight from 'react-highlight';
+import marked from 'marked';
 import './style.css';
+import 'highlight.js/styles/atom-one-light.css';
 
-const DocsContent = () => (
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
+
+const DocsContent = ({ title, content }) => (
   <div id="docs-content" className="row">
     <div className="col-xs-12">
       <div className="content">
-        <h2>Introduction</h2>
-
-        <p>We believe that, at the end of the day, every developer expects two main things from their apps;</p>
-
-        <ol>
-          <li>Happy customers</li>
-          <li>Lower costs</li>
-        </ol>
-
-        <p>In technical terms, this translates directly into following:</p>
-
-        <ul>
-          <li>Fast apps = Happy customers</li>
-          <li>Efficient apps - Lower costs</li>
-        </ul>
-
-        <p>You get the idea</p>
+        <h2>{ title }</h2>
+        <Highlight innerHTML={true}>
+          { marked(content) }
+        </Highlight>
       </div>
     </div>
   </div>
 );
+
+DocsContent.propTypes = {
+  title: React.PropTypes.string,
+  content: React.PropTypes.node,
+};
 
 export default DocsContent;

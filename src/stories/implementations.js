@@ -12,6 +12,20 @@ import DocsContainer from '../components/Docs/Container';
 import DocsContent from '../components/Docs/Content';
 import DocsNav from '../components/Docs/Nav';
 
+const content = `
+  We believe that, at the end of the day, every developer expects two main things from their apps;
+  
+  * Happy customers
+  * Lower costs
+
+  In technical terms, this translates directly into following:
+
+  * Fast apps = Happy customers
+  * Efficient apps - Lower costs
+
+  You get the idea
+`;
+
 export default {
   'Homepage.page': (
     <Homepage />
@@ -44,7 +58,10 @@ export default {
     <DocsContainer />
   ),
   'Docs.docs-content': (
-    <DocsContent />
+    <DocsContent
+      content={content}
+      title="Intro"
+    />
   ),
   'Docs.docs-nav': (
     <DocsNav />
