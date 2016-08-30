@@ -1,8 +1,8 @@
 import React from 'react';
 import Highlight from 'react-highlight';
 import marked from 'marked';
-import './style.css';
 import 'highlight.js/styles/atom-one-light.css';
+import './style.css';
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -20,9 +20,11 @@ const DocsContent = ({ title, content }) => (
     <div className="col-xs-12">
       <div className="content">
         <h2>{ title }</h2>
-        <Highlight innerHTML={true}>
+        <div className="markdown">
+          <Highlight innerHTML={true}>
           { marked(content) }
-        </Highlight>
+          </Highlight>
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@ const DocsContent = ({ title, content }) => (
 
 DocsContent.propTypes = {
   title: React.PropTypes.string,
-  content: React.PropTypes.node,
+  content: React.PropTypes.string.isRequired,
 };
 
 export default DocsContent;
