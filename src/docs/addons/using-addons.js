@@ -13,7 +13,7 @@ export default {
 
     Here's how to do it.
 
-    Now we are going to use an addon called **Notes**. Basically, it allows you to write notes for your stories.
+    Now we are going to use an addon called [Notes](https://github.com/kadirahq/storybook-addon-notes). Basically, it allows you to write notes for your stories.
 
     First, you need to create a file called \`addons.js\` inside the storybook config directory and add the following content:
 
@@ -34,7 +34,7 @@ export default {
 
     ~~~js
     import '@kadira/storybook/addons';
-    import '@kadira/storybook-addon-notes/register'
+    import '@kadira/storybook-addon-notes/register';
     ~~~
 
 
@@ -52,7 +52,7 @@ export default {
 
     storiesOf('Button', module)
       .add('with some emoji', () => (
-        <WithNotes notes={'Here we use some emoji as the Button text. Isn\'t it look nice?'}>
+        <WithNotes notes={'Here we use some emoji as the Button text. Isn\\'t it look nice?'}>
           <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
         </WithNotes>
       ));

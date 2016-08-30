@@ -9,6 +9,6 @@ export default {
     * [Actions](https://github.com/kadirahq/storybook-addon-actions)
     * [Links](https://github.com/kadirahq/storybook-addon-links)
     * [Specs](https://github.com/mthuret/storybook-addon-specifications)
-    * [Notes](#)
+    * [Notes](https://github.com/kadirahq/storybook-addon-notes)
   `
 };

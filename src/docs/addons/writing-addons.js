@@ -158,8 +158,27 @@ export default {
 
     ## Packaging
 
-    You can package this addon into a NPM module very easily. Have a look at this repo.
+    You can package this addon into a NPM module very easily. Have a look at this [repo](https://github.com/kadirahq/storybook-addon-notes).
 
     In addition to moving the above code to an NPM module, we've set \`react\` and \`@kadira/storybook-addons\` as peer dependencies.
+
+    ### Local Development
+
+    When you are developing your addon as a package, you can't use \`npm link\` to add it your project. Instead add your package as a local dependency into your \`package.json\` as shown below:
+
+    ~~~json
+    {
+      ...
+      "dependencies": {
+        "@kadira/storybook-addon-notes": "file:///home/username/myrepo"
+      }
+      ...
+    }
+    ~~~
+
+    ### Package Maintenance
+
+    Your packaged Storybook addon needed to be written in ES5. If you are using ES6, then you need to transpile it.
+    In that case, we recommend to use [React CDK](https://github.com/kadirahq/react-cdk) for that.
   `
 };
