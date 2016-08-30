@@ -49,6 +49,13 @@ export function getItem(sectionId, itemId) {
   return item;
 }
 
+export function getFirstItemOfSection(sectionId) {
+  const section = data.sections.find(section => section.id === sectionId);
+  if (!section) return null;
+
+  return section.items[0];
+}
+
 export function getFirstItem() {
   const sections = data.sections || [];
   if (sections.length === 0) return null;

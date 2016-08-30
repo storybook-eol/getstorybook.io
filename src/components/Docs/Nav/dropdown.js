@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
 import './style.css';
 
 class Nav extends React.Component {
@@ -21,16 +22,24 @@ class Nav extends React.Component {
     return (<option value={nav.id} key={nav.id}>{nav.title}</option>);
   }
 
+  changeRoute(selectedSectionId, selectedItemId) {
+    const url = `/docs/${selectedSectionId}/${selectedItemId}`;
+    browserHistory.push(url);
+  }
+
   handleHeadingChange(evt) {
     this.setState({
       selectedSectionId: evt.target.value,
     });
+    this.changeRoute(evt.target.value, "");
   }
 
   handleNavChange(evt) {
+    const { selectedSectionId } = this.state;
     this.setState({
       selectedItemId: evt.target.value,
-    });    
+    });
+    this.changeRoute(selectedSectionId, evt.target.value);
   }
 
   render() {

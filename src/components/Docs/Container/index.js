@@ -32,6 +32,14 @@ class Container extends React.Component {
             title={selectedItem.title}
             content={selectedItem.content}
           />
+
+          <div className="nav-dropdown">
+            <NavDropdown
+              sections={ sections }
+              selectedSection={ selectedItem.section }
+              selectedItem={ selectedItem.id }
+            />
+          </div>
         </div>
       </div>
     );
