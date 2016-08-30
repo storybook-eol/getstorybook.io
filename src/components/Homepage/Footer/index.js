@@ -23,7 +23,7 @@ const Footer = () => (
             <a href="https://voice.kadira.io" target="_blank">
               <img src={mediumIcon} />
             </a>
-          </center>      
+          </center>
         </div>
       </div>
 

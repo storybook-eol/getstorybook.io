@@ -1,30 +1,28 @@
 import React from 'react';
 import Highlight from 'react-highlight';
 import marked from 'marked';
-import 'highlight.js/styles/atom-one-light.css';
+import 'highlight.js/styles/github-gist.css';
 import './style.css';
 
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
   tables: true,
-  breaks: false,
+  breaks: true,
   pedantic: false,
-  sanitize: true,
+  sanitize: false,
   smartLists: true,
   smartypants: false
 });
 
 const DocsContent = ({ title, content }) => (
-  <div id="docs-content" className="row">
-    <div className="col-xs-12">
-      <div className="content">
-        <h2>{ title }</h2>
-        <div className="markdown">
-          <Highlight innerHTML={true}>
-          { marked(content) }
-          </Highlight>
-        </div>
+  <div id="docs-content">
+    <div className="content">
+      <h2 className="title">{ title }</h2>
+      <div className="markdown">
+        <Highlight innerHTML={true}>
+        { marked(content) }
+        </Highlight>
       </div>
     </div>
   </div>

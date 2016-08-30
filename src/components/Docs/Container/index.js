@@ -9,8 +9,8 @@ class Container extends React.Component {
     const { sections, selectedItem, selectedSectionId, selectedItemId } = this.props;
 
     return (
-      <div id="docs-container" className="col-xs-12">
-        <div className="nav col-xs-6 col-md-2">
+      <div id="docs-container" className="row">
+        <div className="nav col-sm-3 col-md-3 hidden-xs">
           <Nav
             sections={ sections }
             selectedSection={ selectedItem.section }
@@ -19,7 +19,7 @@ class Container extends React.Component {
             selectedItemId={ selectedItemId }
           />
         </div>
-        <div className="content col-xs-12 col-md-10">
+        <div className="content col-xs-12 col-sm-9 col-md-9 col-lg-9">
           <div className="nav-dropdown">
             <NavDropdown
               sections={ sections }

@@ -2,10 +2,17 @@
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 17px;
   line-height: 25px;
-  color: #333;
-  margin: 40px 20px;
-  padding: 0 30px;
-  border-left: 1px solid #ccc;
+  margin: 40px 0;
+  max-width: 700px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#docs-content .title {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  line-height: 28px;
+  font-weight: 800;
 }
 
 #docs-content .markdown div,
@@ -14,7 +21,7 @@
 #docs-content .markdown a {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 26px;
   color: #333;
 }
 
@@ -62,6 +69,13 @@
   font-size: 85%;
   background-color: rgba(0,0,0,0.04);
   border-radius: 2px;
+  color: #333;
+}
+
+#docs-content .markdown pre {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
 
 #docs-content .markdown pre code {

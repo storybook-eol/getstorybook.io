@@ -40,10 +40,8 @@ class Nav extends React.Component {
     const { sections } = this.props;
 
     return (
-      <div id="nav" className="row">
-        <div className="col-xs-12">
-          {sections.map(this.renderNavSections.bind(this))}
-        </div>
+      <div id="nav">
+        {sections.map(this.renderNavSections.bind(this))}
       </div>
     );
   }
