@@ -6,6 +6,7 @@ const styles = {
     ...theme.text,
     margin: 0,
     padding: 0,
+    maxWidth: 600,
   },
 
   h2: {

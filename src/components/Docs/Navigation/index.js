@@ -36,7 +36,7 @@ class Navigation extends React.Component {
             {this.renderHeading(section.heading)}
             <ul style={styles.ul}>
               {section.items.map((item) => (
-                <li key={`${section.heading}:${item.title}`}>
+                <li key={`${section.heading}:${item.title}`} style={styles.li}>
                   {this.renderItem(section, item)}
                 </li>
               ))}

@@ -19,7 +19,11 @@ const styles = {
     margin: 0,
     padding: 0,
     listStyle: 'none',
-    lineHeight: '36px',
+  },
+
+  li: {
+    margin: '8px 0',
+    lineHeight: '25px',
   },
 
   item: {
