@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Homepage from './components/Homepage';
 import Docs from './containers/Docs';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, applyRouterMiddleware } from 'react-router';
+import { useScroll } from 'react-router-scroll';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import './lib/autolinker';
 
 ReactDOM.render(
   (
-    <Router history={browserHistory}>
+    <Router
+      history={browserHistory}
+      render={applyRouterMiddleware(useScroll())}
+    >
       <Route path="/" component={Homepage} />
       <Route path="/docs(/:sectionId/:itemId)" component={Docs} />
 

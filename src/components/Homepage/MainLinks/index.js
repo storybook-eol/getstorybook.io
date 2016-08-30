@@ -19,7 +19,7 @@ const MainLinks = () => (
         <div className="col-xs-6 read-docs">
           <h2>Read Docs</h2>
           <center>
-            <a href="http://docs.storybooks.io/" target="_blank">
+            <a href="/docs">
               <div className="docs-img"></div>
             </a>
           </center>
