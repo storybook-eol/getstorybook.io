@@ -6,7 +6,7 @@ import './style.css';
 
 class Container extends React.Component {
   render() {
-    const { sections, selectedItem } = this.props;
+    const { sections, selectedItem, selectedSectionId, selectedItemId } = this.props;
 
     return (
       <div id="docs-container" className="col-xs-12">
@@ -14,7 +14,9 @@ class Container extends React.Component {
           <Nav
             sections={ sections }
             selectedSection={ selectedItem.section }
-            selectedItem={ selectedItem.id }      
+            selectedItem={ selectedItem.id }
+            selectedSectionId={ selectedSectionId }
+            selectedItemId={ selectedItemId }
           />
         </div>
         <div className="content col-xs-12 col-md-10">
@@ -22,7 +24,7 @@ class Container extends React.Component {
             <NavDropdown
               sections={ sections }
               selectedSection={ selectedItem.section }
-              selectedItem={ selectedItem.id }      
+              selectedItem={ selectedItem.id }
             />
           </div>
 
@@ -39,6 +41,8 @@ class Container extends React.Component {
 Container.propTypes = {
   sections: React.PropTypes.array,
   selectedItem: React.PropTypes.object,
+  selectedSectionId: React.PropTypes.string,
+  selectedItemId: React.PropTypes.string,
 };
 
 export default Container;

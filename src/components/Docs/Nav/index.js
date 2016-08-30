@@ -6,58 +6,21 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     const { sections, selectedSection, selectedItem } = props;
-
-    this.state = {
-      selectedSectionId: selectedSection || sections[0].id,
-      selectedItemId: selectedItem || sections[0].items[0].id,
-    };
   }
 
-  // renderHeading(caption) {
-  //   return (<h3>{ caption }</h3>);
-  // }
+  renderNavItem(section, item) {
+    const { selectedSectionId, selectedItemId } = this.props;
+    const cssClass = (
+      section.id === selectedSectionId &&
+      item.id === selectedItemId
+    ) ? "selected" : '';
 
-  // renderItem(section, item) {
-  //   const { prefix = '', selectedSection, selectedItem } = this.props;
-  //   const href = `${prefix}/docs/${section.id}/${item.id}`;
-
-  //   return (
-  //     <Link to={href}>
-  //       {item.title}
-  //     </Link>
-  //   );
-  // }
-
-  renderHeadingOpts(section) {
-    const { selectedSection } = this.props;
+    const url = `/docs/${section.id}/${item.id}`;
+    console.log(section, item);
 
     return (
-      <option
-        key={section.id}
-        value={section.id}
-      >
-        {section.heading}
-      </option>
-    );
-  }
-
-  handleHeadingChange(evt) {
-    // this.setState({
-    //   selectedSectionId: evt.target.value,
-    // });
-  }
-
-  // renderNavOpts(nav) {
-  //   return (<option key={nav.id}>{nav.title}</option>);
-  // }
-
-  renderNavItem(item) {
-    const { selectedSectionId, selectedItemId } = this.state;
-    const cssClass = (item.id === selectedItemId) ? "selected" : '';
-
-    return (
-      <li className={ cssClass } key={ item.id }>
-        {item.title}
+      <li key={ item.id }>
+        <a className={ cssClass } href={url}>{item.title}</a>
       </li>
     );
   }
@@ -67,20 +30,14 @@ class Nav extends React.Component {
       <div key={ section.id }>
         <h3>{ section.heading }</h3>
         <ul>
-          { section.items.map(this.renderNavItem.bind(this)) }
+          { section.items.map(this.renderNavItem.bind(this, section)) }
         </ul>
       </div>
     );
   }
 
   render() {
-    const { sections, selectedSection } = this.props;
-    const { selectedSectionId } = this.state;
-
-    const selectedSectionData = sections.find(section => {
-      return section.id === selectedSectionId;
-    });
-    const navs = selectedSectionData.items;
+    const { sections } = this.props;
 
     return (
       <div id="nav" className="row">
@@ -94,7 +51,6 @@ class Nav extends React.Component {
 
 Nav.propTypes = {
   sections: React.PropTypes.array,
-  selectedSection: React.PropTypes.string,
   selectedItem: React.PropTypes.string,
   prefix: React.PropTypes.string,
 };
