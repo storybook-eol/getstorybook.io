@@ -9,7 +9,7 @@ class Docs extends React.Component {
     const { sections, selectedItem, selectedSectionId, selectedItemId } = this.props;
     return (
       <div className="container">
-        <Header />
+        <Header currentSection="docs"/>
         <Container
           sections={ sections }
           selectedItem={ selectedItem }

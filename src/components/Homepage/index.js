@@ -39,7 +39,7 @@ const featuredStorybooks = [
 
 const Homepage = () => (
   <div className="container">
-    <Header />
+    <Header currentSection="home"/>
     <Heading />
     <Demo />
     <Platforms />
