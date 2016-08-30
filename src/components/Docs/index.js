@@ -4,12 +4,25 @@ import Container from './Container';
 import Footer from '../Homepage/Footer';
 import './style.css';
 
-const Docs = () => (
-  <div className="container">
-    <Header />
-    <Container />
-    <Footer />
-  </div>
-);
+class Docs extends React.Component {
+  render() {
+    const { sections, selectedItem } = this.props;
+    return (
+      <div className="container">
+        <Header />
+        <Container
+          sections={ sections }
+          selectedItem={ selectedItem }
+        />
+        <Footer />
+      </div>
+    );
+  }
+}
+
+Docs.propTypes = {
+  sections: React.PropTypes.array,
+  selectedItem: React.PropTypes.object,
+};
 
 export default Docs;

@@ -28,6 +28,7 @@
 #nav ul li {
   margin: 15px 0;
   padding: 0;
+  cursor: pointer;
 }
 
 #nav ul li.selected {
