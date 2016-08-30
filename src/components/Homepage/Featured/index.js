@@ -25,7 +25,7 @@ class Featured extends React.Component {
     const { featuredStorybooks } = this.props;
     return (
       <div id="featured" className="row">
-        <div className=".col-xs-12">
+        <div className="col-xs-12">
           <h2>Featured Storybooks</h2>
           <div className="row">
             {featuredStorybooks.map(this.renderFeaturedItem.bind(this))}
