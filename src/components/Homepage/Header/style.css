@@ -6,9 +6,8 @@
   padding: 0;
 }
 
-#header-title {
-  font-weight: 800;
-  font-size: 15px;
+#header-title img {
+  width: 125px;
 }
 
 #header-links a {
@@ -39,6 +38,10 @@
 
   #header-title {
     text-align: center;
+  }
+
+  #header-title img {
+    width: 40%;
   }
 
   #header a {

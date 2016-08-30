@@ -5,7 +5,7 @@
 
 .sb-title {
   font-weight: 800;
-  font-size: 90px;
+  width: 600px;
 }
 
 .sb-tagline {
@@ -24,7 +24,7 @@
   }
 
   .sb-title {
-    font-size: 75px;
+    width: 400px;
   }
 
   .sb-tagline {
@@ -39,7 +39,7 @@
   }
 
   .sb-title {
-    font-size: 60px;
+    width: 400px;
   }
 
   .sb-tagline {
@@ -54,7 +54,7 @@
   }
 
   .sb-title {
-    font-size: 40px;
+    width: 80%;
   }
 
   .sb-tagline {
