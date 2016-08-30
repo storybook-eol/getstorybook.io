@@ -12,6 +12,8 @@ import DocsContainer from '../components/Docs/Container';
 import DocsContent from '../components/Docs/Content';
 import DocsNav from '../components/Docs/Nav';
 
+import { docsData } from './data';
+
 const content = `
   We believe that, at the end of the day, every developer expects two main things from their apps;
   
@@ -28,7 +30,9 @@ const content = `
 
 export default {
   'Homepage.page': (
-    <Homepage />
+    <Homepage
+      featuredStorybooks={docsData.featuredStorybooks}
+    />
   ),
   'Homepage.header': (
     <Header />
@@ -46,24 +50,36 @@ export default {
     <MainLinks />
   ),
   'Homepage.featured-storybooks': (
-    <Featured />
+    <Featured
+      featuredStorybooks={docsData.featuredStorybooks}
+    />
   ),
   'Homepage.footer': (
     <Footer />
   ),
   'Docs.page': (
-    <Docs />
+    <Docs
+      sections={docsData.sections}
+      selectedItem={docsData.selectedItem}    
+    />
   ),
   'Docs.docs-container': (
-    <DocsContainer />
+    <DocsContainer
+      sections={docsData.sections}
+      selectedItem={docsData.selectedItem}  
+    />
   ),
   'Docs.docs-content': (
     <DocsContent
-      content={content}
-      title="Intro"
+      title={docsData.selectedItem.title}
+      content={docsData.selectedItem.content}
     />
   ),
   'Docs.docs-nav': (
-    <DocsNav />
+    <DocsNav
+      sections={docsData.sections}
+      selectedSection={docsData.selectedItem.sectionId}
+      selectedItem={docsData.selectedItem.id}    
+    />
   ),
 };
