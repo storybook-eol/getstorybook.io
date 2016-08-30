@@ -6,7 +6,7 @@ const Demo = () => (
   <div id="demo" className="row">
     <div className="col-xs-12">
       <center>
-        <img className="demo-img" src={demoImg} />
+        <img className="demo-img" src={demoImg} role="presentation" />
       </center>
     </div>
   </div>

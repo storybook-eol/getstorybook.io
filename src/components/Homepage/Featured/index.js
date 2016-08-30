@@ -9,13 +9,13 @@ class Featured extends React.Component {
         <div className="col-md-4">
           <a href={ ftItem.storybook.link } target="_blank">
             <center>
-              <img className="ft-logo" src={ ftItem.owner } />
+              <img className="ft-logo" src={ ftItem.owner } role="presentation" />
             </center>
           </a>
         </div>
         <div className="desc col-md-8">
           <p>
-            <a 
+            <a
               href={ftItem.storybook.link}
               className="reponame"
             >

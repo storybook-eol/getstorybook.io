@@ -1,13 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
 import './style.css';
 
 class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-    const { sections, selectedSection, selectedItem } = props;
-  }
-
   renderNavItem(section, item) {
     const { selectedSectionId, selectedItemId } = this.props;
     const cssClass = (

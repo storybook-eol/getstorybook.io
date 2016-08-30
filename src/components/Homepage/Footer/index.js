@@ -12,16 +12,16 @@ const Footer = () => (
         <div className="col-xs-12">
           <center>
             <a href="https://storybooks-slackin.herokuapp.com/" target="_blank">
-              <img src={slackIcon} />
+              <img src={slackIcon} role="presentation" />
             </a>
             <a href="https://tinyletter.com/storybooks" target="_blank">
-              <img src={nlIcon} />
+              <img src={nlIcon} role="presentation" />
             </a>
             <a href="https://twitter.com/kadirahq" target="_blank">
-              <img src={twitterIcon} />
+              <img src={twitterIcon} role="presentation" />
             </a>
             <a href="https://voice.kadira.io" target="_blank">
-              <img src={mediumIcon} />
+              <img src={mediumIcon} role="presentation" />
             </a>
           </center>
         </div>

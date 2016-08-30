@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 import './style.css';
 
@@ -43,7 +42,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { sections, selectedSection } = this.props;
+    const { sections } = this.props;
     const { selectedSectionId, selectedItemId } = this.state;
 
     const selectedSectionData = sections.find(section => {
