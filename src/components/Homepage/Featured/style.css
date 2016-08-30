@@ -16,21 +16,8 @@
 }
 
 .ft-logo {
-  background-repeat: no-repeat;
   width: 45px;
   height: 45px;
-}
-
-.airbnb {
-  background: url('./images/airbnb.png');
-}
-
-.rnw {
-  background: url('./images/rnw.png');
-}
-
-.rb {
-  background: url('./images/rb.png');
 }
 
 .ft-sbooks {
