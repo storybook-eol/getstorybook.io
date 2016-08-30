@@ -2,123 +2,160 @@ export default {
   "Homepage.page": {
     design: require('../design/homepage/homepage.png'),
     note: `
-      This is the homepage. Basically, we need use 1024 as the maximum view of our page.
-      When scaled, we'll put our site on the center around that 2014.
-      We also need to support mobile sites.
+      For this we'll use Bootsrap for sake of simplicity. (Specially for the layouts).
+      Then we use Open Sans as the base font.
 
-      For the most of the fonts in this page is use following font-face unless noted.
-      See: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+      Overall this will be a simple design.
+      All these content should render inside a BS containers and it support mobile.
     `
   },
 
   "Homepage.header": {
     design: require('../design/homepage/header.png'),
     note: `
-      Use 15 as the font size.
-    `
-  },
-
-  "Homepage.logo": {
-    design: require('../design/homepage/logo.png'),
-    note: `
-      Here we use the font as "Arial".
-      That's because, we need to get the same logo on every browser.
+      Just a simple header. In the mobile view, this will show one after other.
     `
   },
 
   "Homepage.heading": {
     design: require('../design/homepage/heading.png'),
+    note: `
+      Use the "Storybook" font to make it super bold. (font-weight=800)
+      In the mobile view, try to make the font-size smaller.
+    `
   },
 
   "Homepage.demo": {
     design: require('../design/homepage/demo.png'),
     note: `
-      Here we'll be using a GIF demo on how to use storybook.
+      Use the image located at src/design/homepage/screenshot.png for this.
+      But in production we use an animated GIF here.
     `
   },
 
-  "Homepage.platforms": {
-    design: require('../design/homepage/flatform.png'),
-  },
+  "Homepage.built-for": {
+    design: require('../design/homepage/built-for.png'),
+    note: `
+      In this, React and React Native are links for following repos:
 
-  "Homepage.features": {
-    design: require('../design/homepage/features.png'),
-  },
+      * React - https://github.com/kadirahq/react-storybook
+      * React Native - https://github.com/kadirahq/react-native-storybook
 
-  "Homepage.getting-started": {
-    design: require('../design/homepage/getting-started.png'),
+      ---
+
+      This one and few components below share some commong features.
+      Those includes bottom border and margins. So create a common component inside
+      the Homepage/styles.css stylesheet and use that class in this other components below.
+    `
   },
 
   "Homepage.main-links": {
     design: require('../design/homepage/main-links.png'),
     note: `
-      Use the logos in the "src/design/homepage" directory.
-      Add following links:
+      This one has two headings. Use a common style in Homepage/styles.css and use it in here.
+      You can also use that in the component below.
 
-      * Slack: https://storybooks-slackin.herokuapp.com/
-      * Docs: /docs
-      * Newsletter: https://tinyletter.com/storybooks
+      In the mobile view, two sections in here show one after other.
     `
   },
 
-  "Homepage.addon": {
-    design: require('../design/homepage/addon.png'),
+  "Homepage.featured-storybooks": {
+    design: require('../design/homepage/featured-storybooks.png'),
     note: `
-      Use this addon is a link. Add a dummy link for now.
-      We can use something working later on.
-    `
-  },
+      This components accepts a input as follows and render links to storybooks as shown above.
+      In the mobile view, these links shows one after other.
 
-  "Homepage.addon-list": {
-    design: require('../design/homepage/addon-list.png'),
+      When we clicked on the Name in the above, we should load the storybook in a new tab.
+
+      Here are the data for this components (to show links):
+
+      [
+        {
+          owner: "https://avatars0.githubusercontent.com/u/698437?v=3&s=200",
+          storybook: {
+            "name": "React Dates",
+            "link": "http://airbnb.io/react-dates/",
+          }
+          source: "https://github.com/airbnb/react-dates"
+        },
+
+        {
+          owner: "https://avatars3.githubusercontent.com/u/239676?v=3&s=460",
+          storybook: {
+            "name": "React Native Web",
+            "link": "https://necolas.github.io/react-native-web/storybook",
+          }
+          source: "https://github.com/necolas/react-native-web"
+        },
+
+        {
+          owner: "https://avatars1.githubusercontent.com/u/15616844?v=3&s=200",
+          storybook: {
+            "name": "React Button",
+            "link": "http://kadira-samples.github.io/react-button/",
+          }
+          source: "https://github.com/kadira-samples/react-button"
+        },
+      ]
+    `
   },
 
   "Homepage.footer": {
     design: require('../design/homepage/footer.png'),
     note: `
-      Use the logos in the "src/design/homepage" directory.
+      Here are the links:
+
+      * Slack: https://storybooks-slackin.herokuapp.com/
+      * NewsLetter: https://tinyletter.com/storybooks
+      * Twiiter: https://twitter.com/kadirahq
+      * Medium: https://voice.kadira.io
     `
   },
 
   "Docs.page": {
     design: require('../design/docs/docs.png'),
-  },
-
-  "Docs.header": {
-    design: require('../design/docs/header.png'),
     note: `
-      For the logo, use the the logo component used in the homepage.
-      But use a use CSS zoom property to scale it down.
-      May be you can use CSS transform too.
+      Here we use the docs layout which is similar to BulletProof Meteor.
+      We've used Arial for some texts. I'll mention them. Otherwise still the
+      fonts are Open Sans.
+
+      Here we reuse the header and footer from the Homepage.
+      Bootstrap Layout is also pretty similar to the Homepage.
     `
   },
 
-  "Docs.docs-header": {
-    design: require('../design/docs/docs-header.png'),
+  "Docs.docs-container": {
+    design: require('../design/docs/docs-container.png'),
     note: `
-      Here this is something fixed for now. Don't add Vue or Angular2 links.
-      For the ReactNative, just like our React Native Storybook repo.
+      This is a container and this as no content.
+      But this one has top and bottom borders and some margins.
     `
   },
 
-  "Docs.navigation": {
-    design: require('../design/docs/navigation.png'),
+  "Docs.docs-nav": {
+    design: require('../design/docs/docs-nav.png'),
     note: `
-      This is the basic navigation menu which is similar to BulletProofMeteor.
-      Get titles and links from the outside and render this navigation.
-      Also get the selectedItem to show it differently.
+      This is docs navigation and accept some dataset to render this.
+      Here's some sample data: https://gist.github.com/arunoda/04fd23e93766eb883afcac93f06fbff7
+
+      Here topic Titles are on Open Sans with 20px and bold texts with color #444.
+      Others are with '"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif"' and 17px.
+      Selected item is marked with bold and in this color: #E25E5E.
+
     `
   },
 
-  "Docs.content": {
-    design: require('../design/docs/content.png'),
+  "Docs.docs-content": {
+    design: require('../design/docs/docs-content.png'),
     note: `
-      This is the content area. Use https://github.com/rexxars/react-markdown
-      to render markdown.
-      For the markdown content use CSS to style it as in this project we support it.
+      This title is with Open Sans 30px font. color #444.
+      Content is with following style:
+       * font: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif.
+       * size: 17px,
+       * line-height: 25px
+       * color: #333
 
-      Beside markdown, get the title from the outside.
-      (That's same as the selectedItem in the navigation).
+    (You can look at the BulletProof Meteor for the actual styles.)
     `
   },
 };

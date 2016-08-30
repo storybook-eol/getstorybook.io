@@ -1,10 +1,9 @@
 import React from 'react';
 import Highlight from 'react-highlight';
-import styles from './styles';
-import 'highlight.js/styles/github-gist.css';
-import './styles.css';
-
 import marked from 'marked';
+import 'highlight.js/styles/github-gist.css';
+import './style.css';
+
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
@@ -16,13 +15,22 @@ marked.setOptions({
   smartypants: false
 });
 
-const Content = ({title, content}) => (
-  <div style={ styles.container } className="docs-content">
-    <h2 style={ styles.h2 }>{ title }</h2>
-    <Highlight innerHTML={true}>
-      {marked(content)}
-    </Highlight>
+const DocsContent = ({ title, content }) => (
+  <div id="docs-content">
+    <div className="content">
+      <h2 className="title">{ title }</h2>
+      <div className="markdown">
+        <Highlight innerHTML={true}>
+        { marked(content) }
+        </Highlight>
+      </div>
+    </div>
   </div>
 );
 
-export default Content;
+DocsContent.propTypes = {
+  title: React.PropTypes.string,
+  content: React.PropTypes.string.isRequired,
+};
+
+export default DocsContent;

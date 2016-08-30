@@ -1,95 +1,85 @@
 import React from 'react';
-import Header from '../components/Homepage/Header';
-import Logo from '../components/Homepage/Logo';
-import Heading from '../components/Homepage/Heading';
-import Platforms from '../components/Homepage/Platforms';
-import Features from '../components/Homepage/Features';
-import GettingStarted from '../components/Homepage/GettingStarted';
-import MainLinks from '../components/Homepage/MainLinks';
-import Addon from '../components/Homepage/Addon';
-import AddonList from '../components/Homepage/AddonList';
-import Demo from '../components/Homepage/Demo';
-import Footer from '../components/Homepage/Footer';
 import Homepage from '../components/Homepage';
-
-import DocsHeader from '../components/Docs/DocsHeader';
-import Navigation from '../components/Docs/Navigation';
-import Content from '../components/Docs/Content';
+import Header from '../components/Homepage/Header';
+import Heading from '../components/Homepage/Heading';
+import Demo from '../components/Homepage/Demo';
+import Platforms from '../components/Homepage/Platforms';
+import MainLinks from '../components/Homepage/MainLinks';
+import Featured from '../components/Homepage/Featured';
+import Footer from '../components/Homepage/Footer';
 import Docs from '../components/Docs';
+import DocsContainer from '../components/Docs/Container';
+import DocsContent from '../components/Docs/Content';
+import DocsNav from '../components/Docs/Nav';
 
 import { docsData } from './data';
 
+const content = `
+  React Storybook is a UI development environment for your React components.
+
+  With it, you can visualize different states of your UI components and develop them interactively. React Storybook runs  outside of your app. So you can develop UI components in isolation without worrying about app specific dependencies and requirements.
+
+  React Storybook also comes with a lot of [addons](/docs/addons/introduction) and a great API to customize as you wish. You can also build a [static version](/docs/basics/exporting-storybook) of your storybook and deploy it anywhere you want.
+
+  Here are some featured storybooks that you can reference to see how Storybook works:
+  
+  * [React Button](http://kadira-samples.github.io/react-button) - [source](https://github.com/kadira-samples/react-button)
+  * [Demo of React Dates](http://airbnb.io/react-dates/) - [source](https://github.com/airbnb/react-dates)
+  * [Demo of React Native Web](http://necolas.github.io/react-native-web/storybook/) - [source](https://github.com/necolas/react-native-web)
+`;
+
 export default {
   'Homepage.page': (
-    <Homepage />
+    <Homepage
+      featuredStorybooks={docsData.featuredStorybooks}
+    />
   ),
   'Homepage.header': (
     <Header />
-  ),
-  'Homepage.logo': (
-    <Logo />
   ),
   'Homepage.heading': (
     <Heading />
   ),
   'Homepage.demo': (
-    <Demo/>
+    <Demo />
   ),
-  'Homepage.platforms': (
+  'Homepage.built-for': (
     <Platforms />
-  ),
-  'Homepage.features': (
-    <Features />
-  ),
-  'Homepage.getting-started': (
-    <GettingStarted />
   ),
   'Homepage.main-links': (
     <MainLinks />
   ),
-  'Homepage.addon': (
-    <Addon
-      name="Action Logger"
-      image={require('../design/homepage/addon-sample-image.png')}
-      description={`
-        Action Logger is something similar to the Chrome's dev console.
-        <br/>
-        With that, you can debug events in UI components and inspect their output.
-      `}
-      link="http://google.com"
+  'Homepage.featured-storybooks': (
+    <Featured
+      featuredStorybooks={docsData.featuredStorybooks}
     />
   ),
-  'Homepage.addon-list': (
-    <AddonList/>
-  ),
   'Homepage.footer': (
-    <Footer/>
+    <Footer />
   ),
-
   'Docs.page': (
     <Docs
       sections={docsData.sections}
-      selectedItem={docsData.selectedItem}
+      selectedItem={docsData.selectedItem}    
     />
   ),
-
-  'Docs.header': (
-    <Header />
-  ),
-  'Docs.docs-header': (
-    <DocsHeader />
-  ),
-  'Docs.navigation': (
-    <Navigation
+  'Docs.docs-container': (
+    <DocsContainer
       sections={docsData.sections}
-      selectedSection={docsData.selectedItem.sectionId}
-      selectedItem={docsData.selectedItem.id}
+      selectedItem={docsData.selectedItem}  
     />
   ),
-  'Docs.content': (
-    <Content
+  'Docs.docs-content': (
+    <DocsContent
       title={docsData.selectedItem.title}
       content={docsData.selectedItem.content}
+    />
+  ),
+  'Docs.docs-nav': (
+    <DocsNav
+      sections={docsData.sections}
+      selectedSection={docsData.selectedItem.sectionId}
+      selectedItem={docsData.selectedItem.id}    
     />
   ),
 };

@@ -1,8 +1,5 @@
 import React from 'react';
-import { Flex, Box } from 'reflexbox';
-import { Link } from 'react-router';
-import Container from '../Container';
-import styles from './styles';
+import './style.css';
 
 const sections = [
   { id: 'home', caption: 'Home', href: '/' },
@@ -13,33 +10,31 @@ class Header extends React.Component {
   renderSections() {
     return sections.map((section) => {
       const { currentSection } = this.props;
-      const style = currentSection === section.id ? styles.currentLink : styles.link;
+      const className = currentSection === section.id ? 'selected' : '';
+
       return (
-        <Link
-          style={style}
+        <a
+          className={className}
           key={section.href}
-          to={section.href}
+          href={section.href}
         >
           {section.caption}
-        </Link>
+        </a>
       );
     });
   }
 
   render() {
     return (
-      <Container>
-        <Flex
-          justify="flex-end"
-        >
-          <Box>
-            <div style={styles.container}>
-              {this.renderSections()}
-              <a style={styles.link} target="_blank" href='https://storybooks.io'>Storybooks.io</a>
-            </div>
-          </Box>
-        </Flex>
-      </Container>
+      <div id="header" className="row">
+        <div className="col-xs-12">
+          <div id="header-title" className="pull-left">STORYBOOK</div>
+          <div id="header-links" className="pull-right">
+            { this.renderSections() }
+            <a href="https://storybooks.io">Storybooks.io</a>
+          </div>
+        </div>
+      </div>
     );
   }
 }

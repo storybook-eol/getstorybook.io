@@ -1,11 +1,20 @@
 import React from 'react';
 import Docs from '../components/Docs';
-import { getNavigationData, getItem, getFirstItem } from '../docs'
+import { getNavigationData, getItem, getFirstItem, getFirstItemOfSection } from '../docs'
 
 class DocsContainer extends React.Component {
   render() {
     const { sectionId, itemId } = this.props.params;
-    const selectedItem = !sectionId? getFirstItem() : getItem(sectionId, itemId);
+    let selectedItem;
+
+    if (!sectionId) {
+      selectedItem = getFirstItem();
+    } else if (!itemId) {
+      selectedItem = getFirstItemOfSection(sectionId);
+    } else {
+      selectedItem = getItem(sectionId, itemId);
+    }
+
     const selectedSectionId = sectionId || 'basics';
     const selectedItemId = selectedItem.id;
 

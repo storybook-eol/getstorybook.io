@@ -1,18 +1,17 @@
 import React from 'react';
-import styles from './styles';
-import Container from '../Container';
+import './style.css';
 
-const Header = () => (
-  <Container>
-    <div style={styles.container}>
-      <div>supports</div>
-      <div style={styles.links}>
-        <a style={styles.link} href='https://github.com/kadirahq/react-storybook'>React</a>
-        &
-        <a style={styles.link} href='https://github.com/kadirahq/react-native-storybook'>React Native</a>
-      </div>
+const Platform = () => (
+  <div id="platform" className="row">
+    <div className="col-md-12">
+      <h3 className="built-for">Built for</h3>
+      <p className="platforms">
+        <a href="https://github.com/kadirahq/react-storybook" target="_blank">React</a> &amp; <a href="https://github.com/kadirahq/react-native-storybook" target="_blank">React Native</a>
+      </p>
+
+      <hr />
     </div>
-  </Container>
+  </div>
 );
 
-export default Header;
+export default Platform;

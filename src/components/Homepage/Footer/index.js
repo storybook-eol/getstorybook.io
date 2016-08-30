@@ -1,34 +1,37 @@
 import React from 'react';
-import { Flex, Box } from 'reflexbox';
-import radium, { StyleRoot } from 'radium';
-import styles from './styles';
-import Container from '../Container';
+import slackIcon from './images/slack.png';
+import nlIcon from './images/mail.png';
+import twitterIcon from './images/twitter.png';
+import mediumIcon from './images/medium.png';
+import './style.css';
 
-class Footer extends React.Component {
-  render() {
-    return(
-      <Container>
-        <Flex
-          align="center"
-          justify="center"
-        >
-          <Box>
-            <StyleRoot>
-            <div style={ styles.container }>
-              <a href="https://twitter.com/kadirahq" target="_blank">
-                <img style={ styles.icon } src={require('../../../design/homepage/twitter-logo.png')}/>
-              </a>
+const Footer = () => (
+  <div id="footer" className="row">
+    <div className="col-md-12">
+      <div className="row logos">
+        <div className="col-xs-12">
+          <center>
+            <a href="https://storybooks-slackin.herokuapp.com/" target="_blank">
+              <img src={slackIcon} />
+            </a>
+            <a href="https://tinyletter.com/storybooks" target="_blank">
+              <img src={nlIcon} />
+            </a>
+            <a href="https://twitter.com/kadirahq" target="_blank">
+              <img src={twitterIcon} />
+            </a>
+            <a href="https://voice.kadira.io" target="_blank">
+              <img src={mediumIcon} />
+            </a>
+          </center>
+        </div>
+      </div>
 
-              <a href="https://voice.kadira.io" target="_blank">
-                <img style={ styles.icon } src={require('../../../design/homepage/medium-logo.png')}/>
-              </a>
-            </div>
-            </StyleRoot>
-          </Box>
-        </Flex>
-      </Container>
-    );
-  }
-}
+      <div id="copyright" className="row">
+        <p>Built by Kadira</p>
+      </div>
+    </div>
+  </div>
+);
 
-export default radium(Footer);
+export default Footer;

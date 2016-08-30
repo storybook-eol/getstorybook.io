@@ -1,0 +1,47 @@
+#header {
+  margin: 50px 0;
+}
+
+#header .col-xs-12 {
+  padding: 0;
+}
+
+#header-title {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+#header-links a {
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+#header-links a.selected {
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 540px) {
+  #header {
+    margin: 50px 0 20px;
+  }
+
+  #header .pull-right {
+    float: none !important;
+    clear: both !important;
+    text-align: center;
+  }
+
+  #header .pull-left {
+    float: none !important;
+    clear: both !important;
+  }
+
+  #header-title {
+    text-align: center;
+  }
+
+  #header a {
+    font-size: 11px !important;
+  }
+}

@@ -1,25 +1,13 @@
 import React from 'react';
-import radium, { StyleRoot } from 'radium';
-import styles from './styles';
-import Logo from '../Logo';
-import Container from '../Container';
+import './style.css';
 
-class Heading extends React.Component {
-  render() {
-    return(
-      <Container>
-        <StyleRoot>
-          <div style={styles.container}>
-            <Logo style={styles.logo}/>
-            <h2 style={styles.h2}>
-              UI Component Development Environment
-              <br />
-              You'll <span style={styles.love}>♥</span> to use</h2>
-          </div>
-        </StyleRoot>
-      </Container>
-    );    
-  }
-}
+const Heading = () => (
+  <div id="heading" className="row">
+    <div className="col-xs-12">
+      <h1 className="sb-title">STORYBOOK</h1>
+      <h3 className="sb-tagline">UI Development Environment<br/>You'll <span className="glyphicon glyphicon-heart heart"></span> to use</h3>
+    </div>
+  </div>
+);
 
-export default radium(Heading);
+export default Heading;

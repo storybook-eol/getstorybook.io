@@ -1,15 +1,15 @@
 import React from 'react';
-import styles from './styles';
-import Container from '../Container';
+import demoImg from './images/demo.gif';
+import './style.css';
 
-const demo = require('../../../design/homepage/demo-sample-image.png');
-
-const AddonList = () => (
-  <Container>
-    <div style={styles.container}>
-      <img style={styles.img} alt="Storybook Demo" src={demo}/>
+const Demo = () => (
+  <div id="demo" className="row">
+    <div className="col-xs-12">
+      <center>
+        <img className="demo-img" src={demoImg} />
+      </center>
     </div>
-  </Container>
+  </div>
 );
 
-export default AddonList;
+export default Demo;

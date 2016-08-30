@@ -1,41 +1,32 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Header from '../Homepage/Header';
-import DocsHeader from './DocsHeader';
-import Navigation from './Navigation';
-import Content from './Content';
 import Container from './Container';
-import { Flex, Box } from 'reflexbox';
+import Footer from '../Homepage/Footer';
+import './style.css';
 
 class Docs extends React.Component {
   render() {
-    const { sections, selectedItem, selectedItemId, selectedSectionId } = this.props;
-
+    const { sections, selectedItem, selectedSectionId, selectedItemId } = this.props;
     return (
-      <div>
-        <Helmet
-          htmlAttributes={{"lang": "en", "amp": undefined}}
-          title="Documentation | React Storybook"
-        />
+      <div className="container">
         <Header currentSection="docs"/>
-        <DocsHeader />
-        <Container>
-        <Flex>
-          <Box col={3}>
-            <Navigation
-              sections={sections}
-              selectedSection={selectedSectionId}
-              selectedItem={selectedItemId}
-            />
-          </Box>
-          <Box>
-            <Content {...selectedItem}/>
-          </Box>
-        </Flex>
-        </Container>
+        <Container
+          sections={ sections }
+          selectedItem={ selectedItem }
+          selectedSectionId={ selectedSectionId }
+          selectedItemId={ selectedItemId }
+        />
+        <Footer />
       </div>
     );
   }
 }
+
+Docs.propTypes = {
+  sections: React.PropTypes.array,
+  selectedItem: React.PropTypes.object,
+  selectedSectionId: React.PropTypes.string,
+  selectedItemId: React.PropTypes.string,
+};
 
 export default Docs;
