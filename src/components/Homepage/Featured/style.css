@@ -15,6 +15,10 @@
   margin-bottom: 35px;
 }
 
+#featured .reponame {
+  font-size: 14px;
+}
+
 .ft-logo {
   width: 45px;
   height: 45px;
@@ -26,7 +30,7 @@
 }
 
 .ft-sbooks .desc {
-  padding-left: 0 !important;  
+  padding-left: 0 !important;
 }
 
 .ft-sbooks p {

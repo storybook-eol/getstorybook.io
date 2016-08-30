@@ -14,7 +14,14 @@ class Featured extends React.Component {
           </a>
         </div>
         <div className="desc col-md-8">
-          <p>{ ftItem.storybook.name }</p>
+          <p>
+            <a 
+              href={ftItem.storybook.link}
+              className="reponame"
+            >
+              { ftItem.storybook.name }
+            </a>
+          </p>
           <a href={ ftItem.source } target="_blank">source</a>
         </div>
       </div>
