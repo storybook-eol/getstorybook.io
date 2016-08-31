@@ -19,10 +19,12 @@
 }
 
 #main-links pre {
-  background-color: #564040;
-  color: #fff;
+  background-color: #444;
+  color: #DDD;
   padding: 15px 30px;
   line-height: 22px;
+  border: 0;
+  border-radius: 0;
 }
 
 .docs-img {

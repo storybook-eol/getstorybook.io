@@ -9,7 +9,7 @@ export default {
 
     ~~~sh
     npm i -g getstorybook
-    cd your-project
+    cd my-react-app
     getstorybook
     ~~~
 

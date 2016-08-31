@@ -11,7 +11,7 @@ const MainLinks = () => (
             <pre>
               <code>
                 npm i -g getstorybook<br/>
-                cd my-app<br/>
+                cd my-react-app<br/>
                 getstorybook<br/>
               </code>
             </pre>
