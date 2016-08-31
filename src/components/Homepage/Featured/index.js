@@ -5,7 +5,7 @@ class Featured extends React.Component {
 
   renderFeaturedItem(ftItem) {
     return (
-      <div className="ft-sbooks col-xs-6 col-md-4">
+      <div className="ft-sbooks col-xs-6 col-md-4" key={ftItem.storybook.link}>
         <div className="col-md-4">
           <a href={ ftItem.storybook.link } target="_blank">
             <center>
