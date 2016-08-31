@@ -3,16 +3,6 @@ import { browserHistory } from 'react-router';
 import './style.css';
 
 class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-    const { sections, selectedSection, selectedItem } = props;
-
-    this.state = {
-      selectedSectionId: selectedSection || sections[0].id,
-      selectedItemId: selectedItem || sections[0].items[0].id,
-    };
-  }
-
   renderHeadingOpts(section) {
     return (<option value={section.id} key={section.id}>{section.heading}</option>);
   }
@@ -27,23 +17,19 @@ class Nav extends React.Component {
   }
 
   handleHeadingChange(evt) {
-    this.setState({
-      selectedSectionId: evt.target.value,
-    });
     this.changeRoute(evt.target.value, "");
   }
 
   handleNavChange(evt) {
-    const { selectedSectionId } = this.state;
-    this.setState({
-      selectedItemId: evt.target.value,
-    });
+    const { sections, selectedSection } = this.props;
+    const selectedSectionId = selectedSection || sections[0].id;
     this.changeRoute(selectedSectionId, evt.target.value);
   }
 
   render() {
-    const { sections } = this.props;
-    const { selectedSectionId, selectedItemId } = this.state;
+    const { sections, selectedSection, selectedItem } = this.props;
+    const selectedSectionId = selectedSection || sections[0].id;
+    const selectedItemId = selectedItem || sections[0].items[0].id;
 
     const selectedSectionData = sections.find(section => {
       return section.id === selectedSectionId;
@@ -78,7 +64,6 @@ Nav.propTypes = {
   sections: React.PropTypes.array,
   selectedSection: React.PropTypes.string,
   selectedItem: React.PropTypes.string,
-  prefix: React.PropTypes.string,
 };
 
 export default Nav;
