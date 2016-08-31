@@ -19,6 +19,10 @@
   font-size: 14px;
 }
 
+#featured a.reponame {
+  color: #6f5151;
+}
+
 .ft-logo {
   width: 45px;
   height: 45px;
