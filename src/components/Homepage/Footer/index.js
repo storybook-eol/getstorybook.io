@@ -1,8 +1,8 @@
 import React from 'react';
-import slackIcon from './images/slack.png';
-import nlIcon from './images/mail.png';
-import twitterIcon from './images/twitter.png';
-import mediumIcon from './images/medium.png';
+import slackIcon from './images/slack-icon.png';
+import nlIcon from './images/mail-icon.png';
+import twitterIcon from './images/twitter-icon.png';
+import mediumIcon from './images/medium-icon.png';
 import './style.css';
 
 const Footer = () => (
