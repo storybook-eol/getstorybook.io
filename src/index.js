@@ -16,7 +16,7 @@ ReactDOM.render(
       render={applyRouterMiddleware(useScroll())}
     >
       <Route path="/" component={Homepage} />
-      <Route path="/docs(/:docId(/:sectionId/(:itemId)))" component={Docs} />
+      <Route path="/docs(/:catId(/:sectionId/(:itemId)))" component={Docs} />
 
     </Router>
   ),

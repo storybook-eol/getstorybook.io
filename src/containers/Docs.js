@@ -1,7 +1,7 @@
 import React from 'react';
 import Docs from '../components/Docs';
 import {
-  getDocs,
+  getCategories,
   getNavigationData,
   getItem,
   getFirstItem,
@@ -10,26 +10,26 @@ import {
 
 class DocsContainer extends React.Component {
   render() {
-    const { docId, sectionId, itemId } = this.props.params;
+    const { catId, sectionId, itemId } = this.props.params;
     
     let selectedItem;
-    const selectedDocId = docId || getDocs()[0].id;
+    const selectedCatId = catId || getCategories()[0].id;
 
     if (!sectionId) {
-      selectedItem = getFirstItem(selectedDocId);
+      selectedItem = getFirstItem(selectedCatId);
     } else if (!itemId) {
-      selectedItem = getFirstItemOfSection(selectedDocId, sectionId);
+      selectedItem = getFirstItemOfSection(selectedCatId, sectionId);
     } else {
-      selectedItem = getItem(selectedDocId, sectionId, itemId);
+      selectedItem = getItem(selectedCatId, sectionId, itemId);
     }
 
     const selectedSectionId = sectionId || 'basics';
     const selectedItemId = selectedItem.id;
 
     const props = {
-      docs: getDocs(),
-      selectedDocId,
-      sections: getNavigationData(selectedDocId),
+      categories: getCategories(),
+      selectedCatId,
+      sections: getNavigationData(selectedCatId),
       selectedItem,
       selectedSectionId,
       selectedItemId,
