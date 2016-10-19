@@ -7,8 +7,9 @@ import './style.css';
 
 class Docs extends React.Component {
   render() {
-    const { sections, selectedItem, selectedSectionId, selectedItemId } = this.props;
+    const { docIds, selectedDocId, sections, selectedItem, selectedSectionId, selectedItemId } = this.props;
     const headTitle = `${selectedItem.title} - React Storybook Docs`;
+
     return (
       <div className="container">
         <Helmet
@@ -16,6 +17,8 @@ class Docs extends React.Component {
         />
         <Header currentSection="docs"/>
         <Container
+          docIds={ docIds }
+          selectedDocId={ selectedDocId }
           sections={ sections }
           selectedItem={ selectedItem }
           selectedSectionId={ selectedSectionId }
@@ -28,6 +31,8 @@ class Docs extends React.Component {
 }
 
 Docs.propTypes = {
+  docIds: React.PropTypes.array,
+  selectedDocId: React.PropTypes.string,
   sections: React.PropTypes.array,
   selectedItem: React.PropTypes.object,
   selectedSectionId: React.PropTypes.string,

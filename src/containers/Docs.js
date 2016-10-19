@@ -1,25 +1,35 @@
 import React from 'react';
 import Docs from '../components/Docs';
-import { getNavigationData, getItem, getFirstItem, getFirstItemOfSection } from '../docs'
+import {
+  getDocIds,
+  getNavigationData,
+  getItem,
+  getFirstItem,
+  getFirstItemOfSection
+} from '../docs';
 
 class DocsContainer extends React.Component {
   render() {
-    const { sectionId, itemId } = this.props.params;
+    const { docId, sectionId, itemId } = this.props.params;
+    
     let selectedItem;
+    const selectedDocId = docId || getDocIds()[0];
 
     if (!sectionId) {
-      selectedItem = getFirstItem();
+      selectedItem = getFirstItem(selectedDocId);
     } else if (!itemId) {
-      selectedItem = getFirstItemOfSection(sectionId);
+      selectedItem = getFirstItemOfSection(selectedDocId, sectionId);
     } else {
-      selectedItem = getItem(sectionId, itemId);
+      selectedItem = getItem(selectedDocId, sectionId, itemId);
     }
 
     const selectedSectionId = sectionId || 'basics';
     const selectedItemId = selectedItem.id;
 
     const props = {
-      sections: getNavigationData(),
+      docIds: getDocIds(),
+      selectedDocId,
+      sections: getNavigationData(selectedDocId),
       selectedItem,
       selectedSectionId,
       selectedItemId,

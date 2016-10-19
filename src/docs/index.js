@@ -1,75 +1,49 @@
 const data = {
-  sections: [
-    {
-      id: 'basics',
-      heading: 'Basics',
-      items: [
-        require('./basics/introduction').default,
-        require('./basics/quick-start-guide').default,
-        require('./basics/slow-start-guide').default,
-        require('./basics/writing-stories').default,
-        require('./basics/exporting-storybook').default,
-      ]
-    },
-    {
-      id: 'configurations',
-      heading: 'Configurations',
-      items: [
-        require('./configurations/default-config').default,
-        require('./configurations/custom-webpack-config').default,
-        require('./configurations/custom-babel-config').default,
-        require('./configurations/add-custom-head-tags').default,
-        require('./configurations/serving-static-files').default,
-        require('./configurations/env-vars').default,
-        require('./configurations/cli-options').default,
-      ]
-    },
-    {
-      id: 'testing',
-      heading: 'Testing',
-      items: [
-        require('./testing/react-ui-testing').default,
-        require('./testing/structural-testing').default,
-        require('./testing/interaction-testing').default,
-        require('./testing/css-style-testing').default,
-        require('./testing/manual-testing').default,
-      ]
-    },
-    {
-      id: 'addons',
-      heading: 'Addons',
-      items: [
-        require('./addons/introduction').default,
-        require('./addons/using-addons').default,
-        require('./addons/addon-gallery').default,
-        require('./addons/writing-addons').default,
-        require('./addons/api').default,
-      ]
-    },
-  ],
+  'storybook-hub': require('./storybook-hub').default,
+  'react-storybook': require('./storybook-hub').default,
 };
 
-export function getNavigationData() {
-  return data.sections;
+export function getDocIds() {
+  return Object.keys(data);
 }
 
-export function getItem(sectionId, itemId) {
-  const section = data.sections.find(section => section.id === sectionId);
+export function getNavigationData(docId) {
+  if (!docId) {
+    docId = getDocIds[0];
+  }
+
+  return data[docId].sections;
+}
+
+export function getItem(docId, sectionId, itemId) {
+  if (!docId) {
+    docId = getDocIds[0];
+  }
+
+  const section = data[docId].sections.find(section => section.id === sectionId);
   if (!section) return null;
 
   const item = section.items.find(item => item.id === itemId);
   return item;
 }
 
-export function getFirstItemOfSection(sectionId) {
-  const section = data.sections.find(section => section.id === sectionId);
+export function getFirstItemOfSection(docId, sectionId) {
+  if (!docId) {
+    docId = getDocIds[0];
+  }
+
+  const section = data[docId].sections.find(section => section.id === sectionId);
   if (!section) return null;
 
   return section.items[0];
 }
 
-export function getFirstItem() {
-  const sections = data.sections || [];
+export function getFirstItem(docId) {
+  if (!docId) {
+    docId = getDocIds[0];
+  }
+
+  const sections = data[docId].sections || [];
   if (sections.length === 0) return null;
 
   return sections[0].items[0];
