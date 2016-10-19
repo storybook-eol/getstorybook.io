@@ -8,7 +8,7 @@ export default {
   id: "getting-started",
   title: "Getting Started",
   content: stripIndent`
-    This guide will help you to connect your React app (or project) to Storybook Hub.
+    This guide will help you to connect your React app (or project) to [Storybook Hub](https://hub.getstorybook.io/).
 
     ## Add Storybook for Your Project
 

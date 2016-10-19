@@ -22,8 +22,8 @@
 }
 
 #docs-container ul.top-nav li.selected {
-  background-color: #eee;
-  font-weight: bold;
+  background-color: #eb5d88;
+  color: #FFF;
 }
 
 #docs-container ul.top-nav li a {
