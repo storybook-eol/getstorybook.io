@@ -12,7 +12,7 @@ class Nav extends React.Component {
   }
 
   changeRoute(selectedDocId, selectedSectionId, selectedItemId) {
-    const url = `/docs/${selectedSectionId}/${selectedItemId}`;
+    const url = `/docs/${selectedDocId}/${selectedSectionId}/${selectedItemId}`;
     browserHistory.push(url);
   }
 
