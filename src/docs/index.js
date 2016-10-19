@@ -1,11 +1,11 @@
 const data = {
-  'storybook-hub': {
-    title: 'Storybook Hub',
-    sections: require('./storybook-hub').default,
-  },
   'react-storybook': {
     title: 'React Storybook',
     sections: require('./react-storybook').default,
+  },
+  'storybook-hub': {
+    title: 'Storybook Hub',
+    sections: require('./storybook-hub').default,
   },
 };
 
