@@ -5,14 +5,14 @@ import Content from '../Content';
 import './style.css';
 
 class Container extends React.Component {
-  renderTopNav(docId) {
-    const path = `/docs/${docId}`;
-    return (<p><a href={ path }>{ docId }</a></p>);
+  renderTopNav(doc) {
+    const path = `/docs/${doc.id}`;
+    return (<p key={ doc.id }><a href={ path }>{ doc.title }</a></p>);
   }
 
   render() {
     const {
-      docIds,
+      docs,
       selectedDocId,
       sections,
       selectedItem,
@@ -25,7 +25,7 @@ class Container extends React.Component {
 
         <div className="row">
           <div className="col-xs-12">
-            { docIds.map(this.renderTopNav) }
+            { docs.map(this.renderTopNav) }
           </div>
         </div>
 
@@ -69,7 +69,7 @@ class Container extends React.Component {
 }
 
 Container.propTypes = {
-  docIds: React.PropTypes.array,
+  docs: React.PropTypes.array,
   sections: React.PropTypes.array,
   selectedItem: React.PropTypes.object,
   selectedSectionId: React.PropTypes.string,

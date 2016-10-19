@@ -1,7 +1,7 @@
 import React from 'react';
 import Docs from '../components/Docs';
 import {
-  getDocIds,
+  getDocs,
   getNavigationData,
   getItem,
   getFirstItem,
@@ -13,7 +13,7 @@ class DocsContainer extends React.Component {
     const { docId, sectionId, itemId } = this.props.params;
     
     let selectedItem;
-    const selectedDocId = docId || getDocIds()[0];
+    const selectedDocId = docId || getDocs()[0].id;
 
     if (!sectionId) {
       selectedItem = getFirstItem(selectedDocId);
@@ -27,7 +27,7 @@ class DocsContainer extends React.Component {
     const selectedItemId = selectedItem.id;
 
     const props = {
-      docIds: getDocIds(),
+      docs: getDocs(),
       selectedDocId,
       sections: getNavigationData(selectedDocId),
       selectedItem,
