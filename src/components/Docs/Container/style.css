@@ -5,6 +5,30 @@
   padding: 0;
 }
 
+#docs-container ul.top-nav {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+
+#docs-container ul.top-nav li {
+  display: inline-block;
+  background-color: #eee;
+  margin-right: 10px;
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+#docs-container ul.top-nav li.selected {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+#docs-container ul.top-nav li a {
+  font-size: 13px;
+}
+
 #docs-container .nav-dropdown {
   display: none;
 }

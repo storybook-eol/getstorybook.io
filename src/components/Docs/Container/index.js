@@ -6,8 +6,14 @@ import './style.css';
 
 class Container extends React.Component {
   renderTopNav(doc) {
+    const { selectedDocId } = this.props;
     const path = `/docs/${doc.id}`;
-    return (<p key={ doc.id }><a href={ path }>{ doc.title }</a></p>);
+
+    if (selectedDocId === doc.id) {
+      return (<li className="selected" key={ doc.id }>{ doc.title }</li>);
+    }
+
+    return (<li key={ doc.id }><a href={ path }>{ doc.title }</a></li>);
   }
 
   render() {
@@ -22,10 +28,11 @@ class Container extends React.Component {
 
     return (
       <div id="docs-container" className="row">
-
         <div className="row">
           <div className="col-xs-12">
-            { docs.map(this.renderTopNav) }
+            <ul className="top-nav">
+              { docs.map(this.renderTopNav.bind(this)) }
+            </ul>
           </div>
         </div>
 
