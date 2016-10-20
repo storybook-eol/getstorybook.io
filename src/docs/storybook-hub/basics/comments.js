@@ -1,11 +1,15 @@
 import {stripIndent} from 'common-tags';
 
+import commentsInsideStorybookImage from './static/comments-inside-storybook.png';
+
 export default {
   id: "comments",
   title: "Comments",
   content: stripIndent`
     You can comment inside Storybooks and discuss with your team. Comments are namespaced based on the git branch.
     So, any storybook associated with a particular branch has the same set of comments.
+
+    ![Comment Inside Storybook](${commentsInsideStorybookImage})
 
     Adding comments support is easy. Add following NPM packages into your app:
 
