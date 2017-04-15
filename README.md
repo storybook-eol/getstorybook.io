@@ -4,6 +4,12 @@ This is the source for [getstorybook.io](https://getstorybook.io). This is a [Cr
 
 This site has also has the documentation for Storybook.
 
+---
+
+**This repo has been deprecated because it's now included in https://github.com/storybooks/storybook**
+
+---
+
 ### Usage
 
 ```
