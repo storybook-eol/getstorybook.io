@@ -1,25 +1,9 @@
 # Website for [getstorybook.io](https://getstorybook.io)
 
-This is the source for [getstorybook.io](https://getstorybook.io). This is a [Create React App](https://github.com/facebookincubator/create-react-app) based site.
+This contents of this repo was moved to the [Storybook monorepo](https://github.com/storybooks/storybook/) and the public docs location has been changed.
 
-This site has also has the documentation for Storybook.
+- The old docs location was: **https://getstorybook.io**
+- The docs location is: **https://storybook.js.org**
+- The location of the source is: https://github.com/storybooks/storybook/tree/master/docs
 
----
-
-**This repo has been deprecated because it's now included in https://github.com/storybooks/storybook**
-
----
-
-### Usage
-
-```
-npm i
-npm start
-```
-
-### Edit Documentation
-
-This website carries the documentation for Storybook.<br/>
-Documentation is located at: [`src/docs`](/src/docs) directory.
-
-It's written in Markdown and ES6. So, it supports goodies of both worlds.
+The repo you're looking at now is out of date and no longer maintained.
